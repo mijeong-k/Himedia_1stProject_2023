@@ -7,7 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
+import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -34,9 +34,9 @@ public class Documents  extends WindowAdapter implements ActionListener{
 //    private boolean []match = new boolean[] {true, true, true, true, true, true, true, true};
     private String[] where;
 	
-	public String getUserID() {
-		return userID;
-	}
+//	public String getUserID() {
+//		return userID;
+//	}
 
 	public Documents(String userID) {
 		this.userID = userID;
@@ -114,6 +114,7 @@ public class Documents  extends WindowAdapter implements ActionListener{
 			remove[i].setBounds(285, height, 60, 20);
 			height += 50;
 			docHome.add(remove[i]);
+			remove[i].addActionListener(this);
 		}		
 		
 		
@@ -139,6 +140,8 @@ public class Documents  extends WindowAdapter implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		
+// 파일선택 액션
 		if (e.getSource() == select[0]) {
 			if (fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
 				find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
@@ -212,11 +215,44 @@ public class Documents  extends WindowAdapter implements ActionListener{
 			}
 		}
 
+		
+//		if(e.getSource() == remove[0]) {
+//			txtField[0].setText("");
+//			
+//			String filename = "FIENAME"+"1";
+//			String inpid = userID;
+//			ArrayList<MemberVo> check = dao.check(inpid);
+//
+//			MemberVo data = (MemberVo) check.get(0);
+//			String email = data.getEmail();
+//			System.out.println("-----------로그인유저 아이디 :"+email);
+//			
+//			dao.deleteFilePosition(dao.checkUserId(inpid), filename);			
+//			
+//		}
+		
+		
+		
+		
+		
+		
+		
+		
+// 제출 액션
 		if (e.getSource() == submit) {
-//			dao.fileposition(getUserID(), where[0] ,where[1],where[2],where[3],where[4],where[5],where[6],where[7]);
+			String inpid = userID;
+			ArrayList<MemberVo> check = dao.check(inpid);
+
+			MemberVo data = (MemberVo) check.get(0);
+			String email = data.getEmail();
+			System.out.println("-----------로그인유저 아이디 :"+email);
+			
+//			dao.fileposition(dao.checkUserId(inpid), where[0] ,where[1],where[2],where[3],where[4],where[5],where[6],where[7]);
 			dao.fileposition("1001", where[0], where[1], where[2], where[3], where[4], where[5], where[6], where[7]);
 			JOptionPane.showMessageDialog(null, "제출되었습니다.", "제출성공", JOptionPane.WARNING_MESSAGE);
 		}
+				
+		
 	}
 	
 	@Override
