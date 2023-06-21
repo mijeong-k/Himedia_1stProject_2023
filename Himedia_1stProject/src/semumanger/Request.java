@@ -29,9 +29,9 @@ public class Request extends WindowAdapter implements ActionListener, FocusListe
 	private JDialog nextguide;
 	private String userID;
 
-	public String getUserID() {
-		return userID;
-	}
+//	public String getUserID() {
+//		return userID;
+//	}
 
 	public Request(String userID) {
 		this.userID = userID;
@@ -166,7 +166,7 @@ public class Request extends WindowAdapter implements ActionListener, FocusListe
 				return;
 			}
 			
-			String inpid = getUserID();
+			String inpid = userID;
 			ArrayList<MemberVo> check = dao.check(inpid);
 
 			MemberVo data = (MemberVo) check.get(0);
@@ -174,12 +174,12 @@ public class Request extends WindowAdapter implements ActionListener, FocusListe
 			System.out.println(email);
 
 			dao.request(dao.checkUserId(inpid), companyTxt.getText(), ceoTxt.getText(), dateTxt.getText(),
-					peopleTxt.getText(), "00000", null);
+					peopleTxt.getText(), "10010", null, null);
 			nextguide.setVisible(true);
 		}
 
 		if (e.getSource() == next) {
-			Documents doc = new Documents(getUserID());
+			Documents doc = new Documents(userID);
 			nextguide.setVisible(false);
 			reqInfo.setVisible(false);
 		}

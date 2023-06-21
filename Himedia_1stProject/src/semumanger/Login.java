@@ -6,6 +6,7 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 import javax.swing.Icon;
@@ -25,6 +26,7 @@ public class Login extends WindowAdapter implements ActionListener {
 	private Icon logoicon, logoicon2;
 	private Dialog loginfail;
 	private MemberDAO dao;
+	private String userID;	
 
 	public Login() {
 
@@ -114,6 +116,9 @@ public class Login extends WindowAdapter implements ActionListener {
 		loginBt.addActionListener(this);
 		joinBt2.addActionListener(this);
 		loginBt2.addActionListener(this);
+		sort.addWindowListener(this);
+		userLogin.addWindowListener(this);
+		loginfail.addWindowListener(this);
 
 // position , backgroungcolor 설정		
 		
@@ -132,6 +137,16 @@ public class Login extends WindowAdapter implements ActionListener {
 		sort.setResizable(false);
 //		join.setResizable(false);
 	}
+	
+	public void windowClosing(WindowEvent e) {		
+		if(e.getComponent() == loginfail) {
+			loginfail.dispose();
+		}else {
+			System.exit(0);
+		}
+		
+	}
+	
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -158,7 +173,10 @@ public class Login extends WindowAdapter implements ActionListener {
 				System.out.println(id + " : " + pwd);
 
 				if (pwTxt.getText().equals(pwd)) {
-					Home ho = new Home();
+					userID = id;
+					Home ho = new Home(userID);	
+					userLogin.setVisible(false);
+					
 				} else {
 					loginfail.setVisible(true);
 				}

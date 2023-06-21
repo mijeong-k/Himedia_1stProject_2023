@@ -10,6 +10,7 @@ import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,26 +27,24 @@ public class Documents  extends WindowAdapter implements ActionListener{
 	private String[] listname;
 	private JTextField title;
 	private JTextField[] txtField;
-	private JButton submit;
-	private JButton[] select, remove;
-//	private JButton[] save;
+	private JButton submit, ok;
+	private JButton[] select;
+//	private JButton[] save, remove;
 	private JFileChooser fileComponent = new JFileChooser();
     private int find, last;
-//    private boolean []match = new boolean[] {true, true, true, true, true, true, true, true};
     private String[] where;
-	
-//	public String getUserID() {
-//		return userID;
-//	}
+    private JDialog submitTrue;	
+    private JLabel submitment;
 
 	public Documents(String userID) {
 		this.userID = userID;
 		dao = new MemberDAO();
 		where= new String[]{"","","","","","","",""};
 		
-		docHome = new JFrame("세무매니저-자료제출");
-		docHome.setSize(385, 570);
+		docHome = new JFrame("부가가치세 신고의뢰-자료제출");
+		docHome.setSize(380, 570);
 		docHome.setLayout(null);
+		docHome.getContentPane().setBackground(Color.white);
 		
 		filechoose = new JFrame("파일선택");
 		filechoose.setSize(440, 600);
@@ -87,7 +86,7 @@ public class Documents  extends WindowAdapter implements ActionListener{
 		height = 80;
 		for (int i = 0; i < txtField.length; i++) {
 			txtField[i] = new JTextField("파일명");
-			txtField[i].setBounds(105, height, 180, 20);
+			txtField[i].setBounds(105, height, 230, 20);
 			height += 50;
 			docHome.add(txtField[i]);
 			txtField[i].setForeground(Color.black);
@@ -107,34 +106,47 @@ public class Documents  extends WindowAdapter implements ActionListener{
 //		}
 
 // 삭제 button		
-		remove = new JButton[8];
-		height = 80;
-		for (int i = 0; i < remove.length; i++) {
-			remove[i] = new JButton("삭제");
-			remove[i].setBounds(285, height, 60, 20);
-			height += 50;
-			docHome.add(remove[i]);
-			remove[i].addActionListener(this);
-		}		
+//		remove = new JButton[8];
+//		height = 80;
+//		for (int i = 0; i < remove.length; i++) {
+//			remove[i] = new JButton("삭제");
+//			remove[i].setBounds(285, height, 60, 20);
+//			height += 50;
+//			docHome.add(remove[i]);
+//			remove[i].addActionListener(this);
+//		}		
 		
+// 제출 팝업창		
+		submitTrue = new JDialog(docHome, "제출성공", false);
+		submitTrue.setSize(250, 200);
+		submitTrue.setLayout(null);
 		
 		submit = new JButton("저장 및 제출");
 		submit.setBounds(130, 470, 120, 30);
 		submit.setBackground(Color.blue);
 		submit.setForeground(Color.white);
 		submit.setFont(new Font("맑은 고딕", Font.BOLD, 12));
+				
+		submitment = new JLabel("<html><body><center>신고의뢰가 제출되었습니다.<br>서류추가 및 수정은<br>조회메뉴를 이용해주세요.</center></body></html>");
+		ok = new JButton("확인");
+		submitment.setBounds(40, 20, 250, 70);
+		ok.setBounds(65, 90, 100, 20);
 		
+		
+// add		
 		docHome.add(title);
 		docHome.add(submit);
+		submitTrue.add(submitment);
+		submitTrue.add(ok);
 		docHome.addWindowListener(this);
-		submit.addActionListener(this);
-		
+		submit.addActionListener(this);		
+		ok.addActionListener(this);		
 		
         fileComponent.setFileFilter(new FileNameExtensionFilter("pdf", "pdf")); // 확장자 .xlsx, xls만 선택가
-        fileComponent.setMultiSelectionEnabled(false); // 다중 선택 불가 설정
+        fileComponent.setMultiSelectionEnabled(false); // 다중 선택 불가 설정		
 		
-		docHome.getContentPane().setBackground(Color.white);
 		docHome.setLocationRelativeTo(null);
+		submitTrue.setLocationRelativeTo(null);
 		docHome.setVisible(true);
 	}
 
@@ -219,22 +231,18 @@ public class Documents  extends WindowAdapter implements ActionListener{
 //		if(e.getSource() == remove[0]) {
 //			txtField[0].setText("");
 //			
-//			String filename = "FIENAME"+"1";
-//			String inpid = userID;
-//			ArrayList<MemberVo> check = dao.check(inpid);
-//
-//			MemberVo data = (MemberVo) check.get(0);
-//			String email = data.getEmail();
-//			System.out.println("-----------로그인유저 아이디 :"+email);
-//			
-//			dao.deleteFilePosition(dao.checkUserId(inpid), filename);			
-//			
+//			String filename = "FILENAME"+"1";
+////			String inpid = userID;
+////			ArrayList<MemberVo> check = dao.check(inpid);
+////
+////			MemberVo data = (MemberVo) check.get(0);
+////			String email = data.getEmail();
+////			System.out.println("-----------로그인유저 아이디 :"+email);
+////			
+////			dao.deleteFilePosition(dao.checkUserId(inpid), filename);	
+//			dao.deleteFilePosition("1001", filename);	
+//			JOptionPane.showMessageDialog(null, "파일이 삭제되었습니다. 다시 파일을 선택해주세요.", "파일삭제", JOptionPane.WARNING_MESSAGE);		
 //		}
-		
-		
-		
-		
-		
 		
 		
 		
@@ -247,12 +255,18 @@ public class Documents  extends WindowAdapter implements ActionListener{
 			String email = data.getEmail();
 			System.out.println("-----------로그인유저 아이디 :"+email);
 			
-//			dao.fileposition(dao.checkUserId(inpid), where[0] ,where[1],where[2],where[3],where[4],where[5],where[6],where[7]);
-			dao.fileposition("1001", where[0], where[1], where[2], where[3], where[4], where[5], where[6], where[7]);
-			JOptionPane.showMessageDialog(null, "제출되었습니다.", "제출성공", JOptionPane.WARNING_MESSAGE);
+			dao.fileposition(dao.checkUserId(inpid), where[0] ,where[1],where[2],where[3],where[4],where[5],where[6],where[7]);
+//			dao.fileposition("1001", where[0], where[1], where[2], where[3], where[4], where[5], where[6], where[7]);
+//			JOptionPane.showMessageDialog(null, "<html><body>신고의뢰가 정상제출되었습니다.<br>서류 추가 및 수정은 조회메뉴를 이용해주세요.</body></html>", "제출성공", JOptionPane.WARNING_MESSAGE);
+			submitTrue.setVisible(true);
 		}
 				
-		
+// 제출완료창 닫기=메인메뉴로 돌아가기
+		if(e.getSource() == ok) {
+			submitTrue.setVisible(false);
+			docHome.setVisible(false);
+			Home ho = new Home(userID);	
+		}	
 	}
 	
 	@Override
