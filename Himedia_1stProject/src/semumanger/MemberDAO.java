@@ -234,13 +234,13 @@ public class MemberDAO {
 		}
 	}
 
-	public void deleteFilePosition(String userid, String filename) {
+	public void deleteFilePosition(String userid, int i) {
 		try {
 			Class.forName(driver);
 			Connection conn = DriverManager.getConnection(url, user, password);
 			Statement stmt = conn.createStatement();
 			
-			String sql = "UPDATE DOCUMENTWHERE SET "+ filename +" = '' WHERE USER_ID = "+ "'" + userid + "'";			
+			String sql = "UPDATE DOCUMENTWHERE SET FILENAME"+ i +" = '' WHERE USER_ID = "+ "'" + userid + "'";			
 			System.out.println("--------------------------쿼리확인 : "+sql);
 			boolean b = stmt.execute(sql);
 			
@@ -250,6 +250,40 @@ public class MemberDAO {
 			System.out.println(e);
 		}
 	}	
+	
+	public void updateFilePosition(String userid, int i, String position) {
+		try {
+			Class.forName(driver);
+			Connection conn = DriverManager.getConnection(url, user, password);
+			Statement stmt = conn.createStatement();
+			
+			String sql = "UPDATE DOCUMENTWHERE SET FILENAME"+ i +" = '"+position+"' WHERE USER_ID = "+ "'" + userid + "'";			
+			System.out.println("--------------------------쿼리확인 : "+sql);
+			boolean b = stmt.execute(sql);
+			
+		}catch (ClassNotFoundException e) {
+			System.out.println(e);
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+	}	
+	
+	public void updateinfo(String userid, String company, String ceo, String date, String staff) {
+		try {
+			Class.forName(driver);
+			Connection conn = DriverManager.getConnection(url, user, password);
+			Statement stmt = conn.createStatement();
+			
+			String sql = "UPDATE USERREQUEST SET COMPANY = '"+ company +"', ceo = '"+ceo+"', regidate = '"+date+"', staff = '"+staff+"' WHERE USER_ID = "+ "'" + userid + "'";			
+			System.out.println("--------------------------쿼리확인 : "+sql);
+			boolean b = stmt.execute(sql);
+			
+		}catch (ClassNotFoundException e) {
+			System.out.println(e);
+		} catch (SQLException e) {
+			System.out.println(e);
+		}
+	}
 	
 	
 	public void connDB() {
