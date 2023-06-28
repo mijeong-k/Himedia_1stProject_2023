@@ -23,7 +23,7 @@ public class Request extends WindowAdapter implements ActionListener, FocusListe
 	private JFrame reqInfo;
 	private JLabel company, ceo, date, people, saveMent;
 	private JPanel panel;
-	private JTextField info, companyTxt, ceoTxt, dateTxt, peopleTxt;
+	private JTextField info, companyTxt, ceoTxt, dateTxt, staffTxt;
 	private JButton save, next;
 	private MemberDAO dao;
 	private JDialog nextguide;
@@ -64,11 +64,11 @@ public class Request extends WindowAdapter implements ActionListener, FocusListe
 		companyTxt = new JTextField();
 		ceoTxt = new JTextField();
 		dateTxt = new JTextField();
-		peopleTxt = new JTextField();
+		staffTxt = new JTextField();
 		companyTxt.setBounds(110, 90, 200, 25);
 		ceoTxt.setBounds(110, 130, 200, 25);
 		dateTxt.setBounds(110, 170, 200, 25);
-		peopleTxt.setBounds(110, 210, 200, 25);
+		staffTxt.setBounds(110, 210, 200, 25);
 
 // 버튼
 		save = new JButton("저장 및 다음");
@@ -93,14 +93,17 @@ public class Request extends WindowAdapter implements ActionListener, FocusListe
 		panel.add(companyTxt);
 		panel.add(ceoTxt);
 		panel.add(dateTxt);
-		panel.add(peopleTxt);
+		panel.add(staffTxt);
 		panel.add(save);
 		nextguide.add(saveMent);
 		nextguide.add(next);
 		save.addActionListener(this);
 		next.addActionListener(this);
 		companyTxt.addFocusListener(this);
-
+		ceoTxt.addFocusListener(this);
+		dateTxt.addFocusListener(this);		
+		staffTxt.addFocusListener(this);		
+		
 		reqInfo.add(panel);
 		reqInfo.addWindowListener(this);
 		reqInfo.setLocationRelativeTo(null);
@@ -128,44 +131,43 @@ public class Request extends WindowAdapter implements ActionListener, FocusListe
 				companyTxt.requestFocus(true);
 				return;
 			}
-			
+
 			if (!ceoTxt.getText().matches("^[a-zA-Z]*$") && !ceoTxt.getText().matches("^[가-힣]*$")) {
 				JOptionPane.showMessageDialog(null, "대표명은 영문 또는 한글로 입력하세요.", "대표명 오류", JOptionPane.WARNING_MESSAGE);
 				ceoTxt.requestFocus(true);
 				return;
 			}
-			
+
 			if (ceoTxt.getText().equals(null) || ceoTxt.getText().equals("")) {
 				JOptionPane.showMessageDialog(null, "대표명을 입력해주세요.", "대표명 공백", JOptionPane.WARNING_MESSAGE);
 				ceoTxt.requestFocus(true);
 				return;
 			}
-			
+
 			if (dateTxt.getText().equals(null) || dateTxt.getText().equals("")) {
 				JOptionPane.showMessageDialog(null, "날짜를 입력해주세요.", "날짜 공백", JOptionPane.WARNING_MESSAGE);
 				dateTxt.requestFocus(true);
 				return;
 			}
-			
+
 			if (!dateTxt.getText().matches("^(19[0-9][0-9]|20[0-9][0-9])-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$")) {
 				JOptionPane.showMessageDialog(null, "날짜는 0000-00-00 으로 입력하세요", "날짜 오류", JOptionPane.WARNING_MESSAGE);
 				dateTxt.requestFocus(true);
 				return;
-			}	
-			
-			
-			if (!peopleTxt.getText().matches("^[0-9]*$")) {
+			}
+
+			if (!staffTxt.getText().matches("^[0-9]*$")) {
 				JOptionPane.showMessageDialog(null, "직원수는 숫자로 입력하세요.", "직원수 오류", JOptionPane.WARNING_MESSAGE);
-				peopleTxt.requestFocus(true);
-				return;
-			}		
-			
-			if (peopleTxt.getText().equals(null) || peopleTxt.getText().equals("")) {
-				JOptionPane.showMessageDialog(null, "직원수를 입력해주세요.", "직원수 공백", JOptionPane.WARNING_MESSAGE);
-				peopleTxt.requestFocus(true);
+				staffTxt.requestFocus(true);
 				return;
 			}
-			
+
+			if (staffTxt.getText().equals(null) || staffTxt.getText().equals("")) {
+				JOptionPane.showMessageDialog(null, "직원수를 입력해주세요.", "직원수 공백", JOptionPane.WARNING_MESSAGE);
+				staffTxt.requestFocus(true);
+				return;
+			}
+
 			String inpid = userID;
 			ArrayList<MemberVo> check = dao.check(inpid);
 
@@ -174,7 +176,7 @@ public class Request extends WindowAdapter implements ActionListener, FocusListe
 			System.out.println(email);
 
 			dao.request(dao.checkUserId(inpid), companyTxt.getText(), ceoTxt.getText(), dateTxt.getText(),
-					peopleTxt.getText(), "10010", null, null);
+					staffTxt.getText(), "10010", null, "");
 			nextguide.setVisible(true);
 		}
 
