@@ -123,6 +123,8 @@ public class Join extends WindowAdapter implements ActionListener, FocusListener
 	public void windowClosing(WindowEvent e) {
 		if (e.getComponent() == joingood) {
 			joingood.dispose();
+		} else if (e.getComponent() == join) {
+			join.setVisible(false);
 		} else {
 			System.exit(0);
 		}
@@ -182,13 +184,13 @@ public class Join extends WindowAdapter implements ActionListener, FocusListener
 
 			if (phoneTxt.getText().equals(null) || phoneTxt.getText().equals("")) {
 				JOptionPane.showMessageDialog(null, "핸드폰번호를 입력해주세요.", "핸드폰번호 공백", JOptionPane.WARNING_MESSAGE);
-				phoneTxt.addFocusListener(this);
+				phoneTxt.requestFocus(true);
 				return;
 			}
 			if (!phoneTxt.getText().matches("^\\d{3}-\\d{3,4}-\\d{4}$")
 					&& !phoneTxt.getText().matches("^\\\\d{2,3}-\\\\d{3,4}-\\\\d{4}$")) {
 				JOptionPane.showMessageDialog(null, "핸드폰번호는 - 을 포함하여 작성하세요.", "핸드폰번호 오류", JOptionPane.WARNING_MESSAGE);
-				phoneTxt.addFocusListener(this);
+				phoneTxt.requestFocus(true);
 				return;
 			}
 
