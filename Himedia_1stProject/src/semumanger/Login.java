@@ -118,7 +118,11 @@ public class Login extends WindowAdapter implements ActionListener {
 		loginBt2.addActionListener(this);
 		sort.addWindowListener(this);
 		userLogin.addWindowListener(this);
+		adminBt.addActionListener(this);
 		loginfail.addWindowListener(this);
+		idFindBt.addActionListener(this);
+		pwFindBt.addActionListener(this);
+		
 
 // position , backgroungcolor 설정		
 		
@@ -156,10 +160,23 @@ public class Login extends WindowAdapter implements ActionListener {
 			userLogin.setVisible(true);
 		}
 		
+		if (e.getSource() == adminBt) {
+			sort.setVisible(false);
+			MngLogin ml = new MngLogin();
+		}
+		
 		if (e.getSource() == joinBt) {
 			userLogin.setVisible(false);
 			Join jo = new Join();
 		}
+		
+		if (e.getSource() == idFindBt) {
+			Idfind idf = new Idfind();
+		}		
+		
+		if (e.getSource() == pwFindBt) {
+			Pwdfind pf = new Pwdfind();
+		}	
 		
 		if (e.getSource() == loginBt) {
 			System.out.println(idTxt.getText() + pwTxt.getText());
@@ -188,12 +205,14 @@ public class Login extends WindowAdapter implements ActionListener {
 		
 		if (e.getSource() == joinBt2) {
 			loginfail.setVisible(false);
-			userLogin.setVisible(false);
+			sort.setVisible(false);
+//			userLogin.setVisible(false);
 			Join jo = new Join();		
 		}
 		
 		if (e.getSource() == loginBt2) {
 			loginfail.setVisible(false);
+			
 		}		
 		
 	}
