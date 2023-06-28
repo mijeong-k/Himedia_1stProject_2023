@@ -43,7 +43,8 @@ public class Home extends WindowAdapter implements ActionListener {
 		home.add(icon1);
 		home.add(icon2);
 		request.addActionListener(this);
-
+		search.addActionListener(this);
+		home.addWindowListener(this);
 		home.getContentPane().setBackground(Color.white);
 		home.setLocationRelativeTo(null);
 		home.setVisible(true);
@@ -53,12 +54,10 @@ public class Home extends WindowAdapter implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == request) {
 			Request rq = new Request(userID);
-			home.setVisible(false);
 		}
 
 		if(e.getSource() == search) {
 			Search sc = new Search(userID);
-			home.setVisible(false);
 		}
 	}
 
