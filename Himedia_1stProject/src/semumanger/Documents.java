@@ -14,7 +14,6 @@ import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -29,7 +28,6 @@ public class Documents  extends WindowAdapter implements ActionListener{
 	private JTextField[] txtField;
 	private JButton submit, ok;
 	private JButton[] select;
-//	private JButton[] save, remove;
 	private JFileChooser fileComponent = new JFileChooser();
     private int find, last;
     private String[] where;
@@ -92,29 +90,7 @@ public class Documents  extends WindowAdapter implements ActionListener{
 			txtField[i].setForeground(Color.black);
 			txtField[i].setEditable(false);
 			txtField[i].setBackground(Color.lightGray);
-		}
-
-// 저장 button		
-//		save = new JButton[8];
-//		height = 80;
-//		for (int i = 0; i < save.length; i++) {
-//			save[i] = new JButton("저장");
-//			save[i].setBounds(285, height, 60, 20);
-//			height += 50;
-//			docHome.add(save[i]);
-//			save[i].addActionListener(this);
-//		}
-
-// 삭제 button		
-//		remove = new JButton[8];
-//		height = 80;
-//		for (int i = 0; i < remove.length; i++) {
-//			remove[i] = new JButton("삭제");
-//			remove[i].setBounds(285, height, 60, 20);
-//			height += 50;
-//			docHome.add(remove[i]);
-//			remove[i].addActionListener(this);
-//		}		
+		}	
 		
 // 제출 팝업창		
 		submitTrue = new JDialog(docHome, "제출성공", false);
@@ -242,8 +218,7 @@ public class Documents  extends WindowAdapter implements ActionListener{
 ////			dao.deleteFilePosition(dao.checkUserId(inpid), filename);	
 //			dao.deleteFilePosition("1001", filename);	
 //			JOptionPane.showMessageDialog(null, "파일이 삭제되었습니다. 다시 파일을 선택해주세요.", "파일삭제", JOptionPane.WARNING_MESSAGE);		
-//		}
-		
+//		}		
 		
 		
 // 제출 액션
@@ -257,7 +232,6 @@ public class Documents  extends WindowAdapter implements ActionListener{
 			
 			dao.fileposition(dao.checkUserId(inpid), where[0] ,where[1],where[2],where[3],where[4],where[5],where[6],where[7]);
 //			dao.fileposition("1001", where[0], where[1], where[2], where[3], where[4], where[5], where[6], where[7]);
-//			JOptionPane.showMessageDialog(null, "<html><body>신고의뢰가 정상제출되었습니다.<br>서류 추가 및 수정은 조회메뉴를 이용해주세요.</body></html>", "제출성공", JOptionPane.WARNING_MESSAGE);
 			submitTrue.setVisible(true);
 		}
 				
@@ -265,7 +239,6 @@ public class Documents  extends WindowAdapter implements ActionListener{
 		if(e.getSource() == ok) {
 			submitTrue.setVisible(false);
 			docHome.setVisible(false);
-			Home ho = new Home(userID);	
 		}	
 	}
 	
