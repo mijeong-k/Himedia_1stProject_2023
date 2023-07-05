@@ -5,7 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -27,6 +29,8 @@ public class MngSearch extends WindowAdapter implements ActionListener {
 	private JButton fix, next;
 	private JTextArea txtArea;
 	private JScrollPane scrollbar;
+	private Date today = new Date();
+	private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd / hh:mm");
 
 	public MngSearch(String userid) {
 		dao = new MemberDAO2();
@@ -34,7 +38,7 @@ public class MngSearch extends WindowAdapter implements ActionListener {
 		
 		this.userid = userid;
 
-		System.out.println(userid);
+//		System.out.println(userid);
 		mw = new JFrame("담당자-의뢰내역조회");
 		mw.setSize(390, 540);
 		mw.setLayout(null);
@@ -107,7 +111,7 @@ public class MngSearch extends WindowAdapter implements ActionListener {
 
 		fix = new JButton("수정요청");
 		fix.setBounds(250, 430, 90, 20);
-		// 수저요청 버튼 누르면 수정멘트남기는 다이알로그 뜸. 입력하면 DB-fixguide 인서트.
+		// 수정요청 버튼 누르면 수정멘트남기는 다이알로그 뜸. 입력하면 DB-fixguide 인서트.
 		next = new JButton("다음");
 		next.setBounds(280, 280, 60, 20);
 
@@ -146,7 +150,7 @@ public class MngSearch extends WindowAdapter implements ActionListener {
 		MemberVo2 datalist = (MemberVo2) requestlist2.get(0);
 
 		String rname = datalist.getRname();
-		System.out.println("--------------------------신청자정보-신청자명 확인 : " + rname);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 신청자명 : " + rname);
 		return rname;
 	}
 
@@ -158,7 +162,7 @@ public class MngSearch extends WindowAdapter implements ActionListener {
 		ArrayList<MemberVo2> requestlist2 = dao.requestlist2(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist2.get(0);
 		String company = datalist.getCompany();
-		System.out.println("--------------------------신청자정보-회사명 확인 : " + company);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 회사명 : " + company);
 
 		return company;
 	}
@@ -171,7 +175,7 @@ public class MngSearch extends WindowAdapter implements ActionListener {
 		ArrayList<MemberVo2> requestlist2 = dao.requestlist2(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist2.get(0);
 		String ceo = datalist.getCeo();
-		System.out.println("--------------------------신청자정보-대표자명 확인 : " + ceo);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 대표자명 : " + ceo);
 
 		return ceo;
 	}
@@ -184,7 +188,7 @@ public class MngSearch extends WindowAdapter implements ActionListener {
 		ArrayList<MemberVo2> requestlist2 = dao.requestlist2(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist2.get(0);
 		String date = datalist.getDate();
-		System.out.println("--------------------------신청자정보-설립일 확인 : " + date);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 설립일 : " + date);
 
 		return date;
 	}
@@ -197,7 +201,7 @@ public class MngSearch extends WindowAdapter implements ActionListener {
 		ArrayList<MemberVo2> requestlist2 = dao.requestlist2(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist2.get(0);
 		String staff = datalist.getStaff();
-		System.out.println("--------------------------신청자정보-직원수 확인 : " + staff);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 직원수 : " + staff);
 
 		return staff;
 	}
@@ -206,7 +210,7 @@ public class MngSearch extends WindowAdapter implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == next) {
 			MngSearchDoc msd = new MngSearchDoc(userid);
-			System.out.println("userid 확인 :"+userid);
+//			System.out.println("userid 확인 :"+userid);
 			// user code로 산출됨
 //			SearchDoc sd = new SearchDoc("");
 		}

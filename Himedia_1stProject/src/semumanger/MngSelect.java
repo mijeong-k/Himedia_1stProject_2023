@@ -30,7 +30,7 @@ public class MngSelect extends WindowAdapter implements ActionListener{
 		
 		dao = new ManagerDAO();
 		
-		System.out.println(mngId+ ":" +userId);
+//		System.out.println(mngId+ ":" +userId);
 
 		ms = new JFrame("담당자 선택");
 		ms.setSize(255, 200);
@@ -77,8 +77,7 @@ public class MngSelect extends WindowAdapter implements ActionListener{
 			if(mngnumlist.getSelectedItem().toString().equals(mngNum[i])) {
 				mngName.setText(mngNames[i]);
 			}
-		}
-		
+		}		
 		if(e.getSource() == select) {
 			String mngcode = mngnumlist.getSelectedItem().toString();
 			dao.updateMng(mngcode, userId);

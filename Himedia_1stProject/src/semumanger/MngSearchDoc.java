@@ -97,142 +97,30 @@ public class MngSearchDoc extends WindowAdapter implements ActionListener {
 			msd.add(download[i]);
 			download[i].addActionListener(this);
 		}
-
 		msd.setVisible(true);
 		msd.setLocationRelativeTo(null);
-
 }
 
 	@Override
-	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == download[0]) {
-			if (txtField[0] != null || txtField[0].equals("")) {
-				ArrayList<ManagerVo> doclist = dao.doclist(userid);
-				ManagerVo datalist = (ManagerVo) doclist.get(0);
-				String filename = datalist.getFilename1();
-				find = filename.lastIndexOf("\\");
-				last = filename.length();
-				String orgFilePath = filename;
-				String outFilePath = "C:\\Download\\" + filename.substring(find + 1, last);
-				fileCopy(orgFilePath, outFilePath);
-				JOptionPane.showMessageDialog(null, "파일 다운을 완료했습니다.(경로: C:\\Download)", "다운 완료", JOptionPane.WARNING_MESSAGE);					
-			}else {
-				JOptionPane.showMessageDialog(null, "제출된 파일이 없습니다.", "다운 오류", JOptionPane.WARNING_MESSAGE);				
+	public void actionPerformed(ActionEvent e) {				
+		for(int i=0; i<download.length; i++) {
+			if (e.getSource() == download[i]) {
+				if (txtField[i] == null || txtField[i].getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "제출된 파일이 없습니다.", "다운 오류", JOptionPane.WARNING_MESSAGE);						
+				}else {
+					ArrayList<ManagerVo> doclist = dao.doclist(userid);
+					ManagerVo datalist = (ManagerVo) doclist.get(0);
+					String filename = datalist.getFilename1();
+					find = filename.lastIndexOf("\\");
+					last = filename.length();
+					String orgFilePath = filename;
+					String outFilePath = "C:\\Download\\" + filename.substring(find + 1, last);
+					fileCopy(orgFilePath, outFilePath);
+					JOptionPane.showMessageDialog(null, "파일 다운을 완료했습니다.(경로: C:\\Download)", "다운 완료",
+							JOptionPane.WARNING_MESSAGE);
+				}
 			}
 		}
-		
-		if (e.getSource() == download[1]) {
-			if (txtField[1] != null || txtField[1].equals("")) {
-				ArrayList<ManagerVo> doclist = dao.doclist(userid);
-				ManagerVo datalist = (ManagerVo) doclist.get(0);
-				String filename = datalist.getFilename2();
-				find = filename.lastIndexOf("\\");
-				last = filename.length();
-				String orgFilePath = filename;
-				String outFilePath = "C:\\Download\\" + filename.substring(find + 1, last);
-				fileCopy(orgFilePath, outFilePath);
-				JOptionPane.showMessageDialog(null, "파일 다운을 완료했습니다.(경로: C:\\Download)", "다운 완료", JOptionPane.WARNING_MESSAGE);					
-			}else {
-				JOptionPane.showMessageDialog(null, "제출된 파일이 없습니다.", "다운 오류", JOptionPane.WARNING_MESSAGE);				
-			}
-		}
-		
-		if (e.getSource() == download[2]) {
-			if (txtField[2] != null || txtField[2].equals("")) {
-				ArrayList<ManagerVo> doclist = dao.doclist(userid);
-				ManagerVo datalist = (ManagerVo) doclist.get(0);
-				String filename = datalist.getFilename3();
-				find = filename.lastIndexOf("\\");
-				last = filename.length();
-				String orgFilePath = filename;
-				String outFilePath = "C:\\Download\\" + filename.substring(find + 1, last);
-				fileCopy(orgFilePath, outFilePath);
-				JOptionPane.showMessageDialog(null, "파일 다운을 완료했습니다.(경로: C:\\Download)", "다운 완료", JOptionPane.WARNING_MESSAGE);					
-			}else {
-				JOptionPane.showMessageDialog(null, "제출된 파일이 없습니다.", "다운 오류", JOptionPane.WARNING_MESSAGE);				
-			}
-		}
-		
-		if (e.getSource() == download[3]) {
-			if (txtField[3] != null || txtField[3].equals("")) {
-				ArrayList<ManagerVo> doclist = dao.doclist(userid);
-				ManagerVo datalist = (ManagerVo) doclist.get(0);
-				String filename = datalist.getFilename4();
-				find = filename.lastIndexOf("\\");
-				last = filename.length();
-				String orgFilePath = filename;
-				String outFilePath = "C:\\Download\\" + filename.substring(find + 1, last);
-				fileCopy(orgFilePath, outFilePath);
-				JOptionPane.showMessageDialog(null, "파일 다운을 완료했습니다.(경로: C:\\Download)", "다운 완료", JOptionPane.WARNING_MESSAGE);					
-			}else {
-				JOptionPane.showMessageDialog(null, "제출된 파일이 없습니다.", "다운 오류", JOptionPane.WARNING_MESSAGE);				
-			}
-		}
-		
-		if (e.getSource() == download[4]) {
-			if (txtField[4] != null || txtField[4].equals("")) {
-				ArrayList<ManagerVo> doclist = dao.doclist(userid);
-				ManagerVo datalist = (ManagerVo) doclist.get(0);
-				String filename = datalist.getFilename5();
-				find = filename.lastIndexOf("\\");
-				last = filename.length();
-				String orgFilePath = filename;
-				String outFilePath = "C:\\Download\\" + filename.substring(find + 1, last);
-				fileCopy(orgFilePath, outFilePath);
-				JOptionPane.showMessageDialog(null, "파일 다운을 완료했습니다.(경로: C:\\Download)", "다운 완료", JOptionPane.WARNING_MESSAGE);					
-			}else {
-				JOptionPane.showMessageDialog(null, "제출된 파일이 없습니다.", "다운 오류", JOptionPane.WARNING_MESSAGE);				
-			}
-		}
-		
-		if (e.getSource() == download[5]) {
-			if (txtField[5] != null || txtField[5].equals("")) {
-				ArrayList<ManagerVo> doclist = dao.doclist(userid);
-				ManagerVo datalist = (ManagerVo) doclist.get(0);
-				String filename = datalist.getFilename6();
-				find = filename.lastIndexOf("\\");
-				last = filename.length();
-				String orgFilePath = filename;
-				String outFilePath = "C:\\Download\\" + filename.substring(find + 1, last);
-				fileCopy(orgFilePath, outFilePath);
-				JOptionPane.showMessageDialog(null, "파일 다운을 완료했습니다.(경로: C:\\Download)", "다운 완료", JOptionPane.WARNING_MESSAGE);					
-			}else {
-				JOptionPane.showMessageDialog(null, "제출된 파일이 없습니다.", "다운 오류", JOptionPane.WARNING_MESSAGE);				
-			}
-		}
-		
-		if (e.getSource() == download[6]) {
-			if (txtField[6] != null || txtField[6].equals("")) {
-				ArrayList<ManagerVo> doclist = dao.doclist(userid);
-				ManagerVo datalist = (ManagerVo) doclist.get(0);
-				String filename = datalist.getFilename7();
-				find = filename.lastIndexOf("\\");
-				last = filename.length();
-				String orgFilePath = filename;
-				String outFilePath = "C:\\Download\\" + filename.substring(find + 1, last);
-				fileCopy(orgFilePath, outFilePath);
-				JOptionPane.showMessageDialog(null, "파일 다운을 완료했습니다.(경로: C:\\Download)", "다운 완료", JOptionPane.WARNING_MESSAGE);					
-			}else {
-				JOptionPane.showMessageDialog(null, "제출된 파일이 없습니다.", "다운 오류", JOptionPane.WARNING_MESSAGE);				
-			}
-		}
-		
-		if (e.getSource() == download[7]) {
-			if (txtField[7] != null || txtField[7].equals("")) {
-				ArrayList<ManagerVo> doclist = dao.doclist(userid);
-				ManagerVo datalist = (ManagerVo) doclist.get(0);
-				String filename = datalist.getFilename8();
-				find = filename.lastIndexOf("\\");
-				last = filename.length();
-				String orgFilePath = filename;
-				String outFilePath = "C:\\Download\\" + filename.substring(find + 1, last);
-				fileCopy(orgFilePath, outFilePath);
-				JOptionPane.showMessageDialog(null, "파일 다운을 완료했습니다.(경로: C:\\Download)", "다운 완료", JOptionPane.WARNING_MESSAGE);					
-			}else {
-				JOptionPane.showMessageDialog(null, "제출된 파일이 없습니다.", "다운 오류", JOptionPane.WARNING_MESSAGE);				
-			}
-		}
-
 	}
 
 	@Override
@@ -243,26 +131,23 @@ public class MngSearchDoc extends WindowAdapter implements ActionListener {
 			System.exit(0);
 		}
 	}
-	
-	  private static boolean fileCopy(String inFilePath, String outFilePath) {
-	      try {
-	         FileInputStream infile = new FileInputStream(inFilePath);
-	         FileOutputStream outfile = new FileOutputStream(outFilePath);
 
-	         byte[] b = new byte[1024];
-	         int len;
-	         while ((len = infile.read(b, 0, 1024)) > 0) {
-	            outfile.write(b, 0, len);
-	         }
-	         infile.close();
-	         outfile.close();
-	      } catch (Exception e) {
-	         e.printStackTrace();
+	private static boolean fileCopy(String inFilePath, String outFilePath) {
+		try {
+			FileInputStream infile = new FileInputStream(inFilePath);
+			FileOutputStream outfile = new FileOutputStream(outFilePath);
 
-	         return false;
-	      }
-
-	      return true;
-	   }
-
+			byte[] b = new byte[1024];
+			int len;
+			while ((len = infile.read(b, 0, 1024)) > 0) {
+				outfile.write(b, 0, len);
+			}
+			infile.close();
+			outfile.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
 }

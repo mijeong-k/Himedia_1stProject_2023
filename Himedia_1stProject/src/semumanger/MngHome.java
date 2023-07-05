@@ -173,7 +173,7 @@ public class MngHome extends WindowAdapter implements ActionListener {
 				}else {					
 					selectId = f4Bt[i].getText(); 
 					MngWorking mwf = new MngWorking(mngId, selectId);
-					System.out.println(selectId);
+//					System.out.println(selectId);
 				}	
 			}
 		}			
@@ -197,7 +197,7 @@ public class MngHome extends WindowAdapter implements ActionListener {
 			mngHome.setVisible(false);
 			MngHome mh = new MngHome(mngId);
 			
-			System.out.println(mngId);
+//			System.out.println(mngId);
 		}
 	}
 

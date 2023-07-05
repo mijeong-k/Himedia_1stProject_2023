@@ -7,7 +7,9 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -28,6 +30,8 @@ public class MngLogin extends WindowAdapter implements ActionListener, FocusList
 	private JTextField idTxt, numTxt;
 	private JPasswordField pwTxt;
 	private JButton loginBt;
+	private Date today = new Date();
+	private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd / hh:mm");
 
 	public MngLogin() {
 		mngdao = new ManagerDAO();
@@ -111,7 +115,7 @@ public class MngLogin extends WindowAdapter implements ActionListener, FocusList
 				return;
 			}		
 						
-			System.out.println(idTxt.getText() + pwTxt.getText());
+//			System.out.println(idTxt.getText() + pwTxt.getText());
 			String inpid = idTxt.getText();
 			ArrayList<ManagerVo> mnglist = mngdao.mnglist(inpid);
 
@@ -122,17 +126,17 @@ public class MngLogin extends WindowAdapter implements ActionListener, FocusList
 				String pwd = data.getPassword();			
 
 				if (pwTxt.getText().equals(pwd) && numTxt.getText().equals(number) ) {
-					System.out.println("--------<로그인성공> 아이디 : "+ email + ", 비번 : " + pwd +", 사번 : "+ number);
+					System.out.println(dateformat.format(today)+" : <로그인성공> 아이디 : "+ email + ", 비번 : " + pwd +", 사번 : "+ number);
 					mngId = number;
 					MngHome mngho = new MngHome(mngId);
 					mngLogin.setVisible(false);
 
 				} else {
-					System.out.println("로그인 실패");
+					System.out.println(dateformat.format(today)+" : 로그인 실패");
 					JOptionPane.showMessageDialog(null, "이메일/비밀번호/사번을 확인해주세요.", "로그인 오류", JOptionPane.WARNING_MESSAGE);
 				}
 			}else {
-				System.out.println("로그인 실패");
+				System.out.println(dateformat.format(today)+" : 로그인 실패");
 				JOptionPane.showMessageDialog(null, "이메일/비밀번호/사번을 확인해주세요.", "로그인 오류", JOptionPane.WARNING_MESSAGE);
 			}
 		}
@@ -144,14 +148,10 @@ public class MngLogin extends WindowAdapter implements ActionListener, FocusList
 	}
 
 	@Override
-	public void focusGained(FocusEvent e) {
-		// TODO Auto-generated method stub
-		
+	public void focusGained(FocusEvent e) {		
 	}
 
 	@Override
-	public void focusLost(FocusEvent e) {
-		// TODO Auto-generated method stub
-		
+	public void focusLost(FocusEvent e) {		
 	}
 }
