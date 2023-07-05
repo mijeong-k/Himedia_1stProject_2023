@@ -173,7 +173,7 @@ public class Request extends WindowAdapter implements ActionListener, FocusListe
 
 			MemberVo data = (MemberVo) check.get(0);
 			String email = data.getEmail();
-			System.out.println(email);
+//			System.out.println(email);
 
 			dao.request(dao.checkUserId(inpid), companyTxt.getText(), ceoTxt.getText(), dateTxt.getText(),
 					staffTxt.getText(), "10010", null, "");

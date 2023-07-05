@@ -7,7 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -33,11 +35,15 @@ public class Documents  extends WindowAdapter implements ActionListener{
     private String[] where;
     private JDialog submitTrue;	
     private JLabel submitment;
+    private Date today;
+    private SimpleDateFormat dateformat;
 
 	public Documents(String userID) {
 		this.userID = userID;
 		dao = new MemberDAO();
 		where= new String[]{"","","","","","","",""};
+		today = new Date();
+		dateformat = new SimpleDateFormat("yyyy-MM-dd / hh:mm");
 		
 		docHome = new JFrame("부가가치세 신고의뢰-자료제출");
 		docHome.setSize(380, 570);
@@ -130,96 +136,19 @@ public class Documents  extends WindowAdapter implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 // 파일선택 액션
-		if (e.getSource() == select[0]) {
-			if (fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
-				find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
-				last = fileComponent.getSelectedFile().toString().length();
-				txtField[0].setText(fileComponent.getSelectedFile().toString().substring(find + 1, last - 6) + "...");
-				where[0]=  fileComponent.getSelectedFile().toString();
-				System.out.println("1번째 파일 경로"+where[0]);
-			}
-		}
-		if (e.getSource() == select[1]) {
-			if (fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
-				find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
-				last = fileComponent.getSelectedFile().toString().length();
-				txtField[1].setText(fileComponent.getSelectedFile().toString().substring(find + 1, last - 6) + "...");
-				where[1] = fileComponent.getSelectedFile().toString();
-				System.out.println("2번째 파일 경로" + where[1]);
-			}
-		}
-		if (e.getSource() == select[2]) {
-			if (fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
-				find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
-				last = fileComponent.getSelectedFile().toString().length();
-				txtField[2].setText(fileComponent.getSelectedFile().toString().substring(find + 1, last - 6) + "...");
-				where[2] = fileComponent.getSelectedFile().toString();
-				System.out.println("3번째 파일 경로" + where[2]);
-			}
-		}
-		if (e.getSource() == select[3]) {
-			if (fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
-				find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
-				last = fileComponent.getSelectedFile().toString().length();
-				txtField[3].setText(fileComponent.getSelectedFile().toString().substring(find + 1, last - 6) + "...");
-				where[3] = fileComponent.getSelectedFile().toString();
-				System.out.println("4번째 파일 경로" + where[3]);
-			}
-		}
-		if (e.getSource() == select[4]) {
-			if (fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
-				find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
-				last = fileComponent.getSelectedFile().toString().length();
-				txtField[4].setText(fileComponent.getSelectedFile().toString().substring(find + 1, last - 6) + "...");
-				where[4] = fileComponent.getSelectedFile().toString();
-				System.out.println("5번째 파일 경로" + where[4]);
-			}
-		}
-		if (e.getSource() == select[5]) {
-			if (fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
-				find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
-				last = fileComponent.getSelectedFile().toString().length();
-				txtField[5].setText(fileComponent.getSelectedFile().toString().substring(find + 1, last - 6) + "...");
-				where[5] = fileComponent.getSelectedFile().toString();
-				System.out.println("6번째 파일 경로" + where[5]);
-			}
-		}
-		if (e.getSource() == select[6]) {
-			if (fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
-				find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
-				last = fileComponent.getSelectedFile().toString().length();
-				txtField[6].setText(fileComponent.getSelectedFile().toString().substring(find + 1, last - 6) + "...");
-				where[6] = fileComponent.getSelectedFile().toString();
-				System.out.println("7번째 파일 경로" + where[6]);
-			}
-		}
-		if (e.getSource() == select[7]) {
-			if (fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
-				find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
-				last = fileComponent.getSelectedFile().toString().length();
-				txtField[7].setText(fileComponent.getSelectedFile().toString().substring(find + 1, last - 6) + "...");
-				where[7] = fileComponent.getSelectedFile().toString();
-				System.out.println("8번째 파일 경로" + where[7]);
-			}
-		}
-
 		
-//		if(e.getSource() == remove[0]) {
-//			txtField[0].setText("");
-//			
-//			String filename = "FILENAME"+"1";
-////			String inpid = userID;
-////			ArrayList<MemberVo> check = dao.check(inpid);
-////
-////			MemberVo data = (MemberVo) check.get(0);
-////			String email = data.getEmail();
-////			System.out.println("-----------로그인유저 아이디 :"+email);
-////			
-////			dao.deleteFilePosition(dao.checkUserId(inpid), filename);	
-//			dao.deleteFilePosition("1001", filename);	
-//			JOptionPane.showMessageDialog(null, "파일이 삭제되었습니다. 다시 파일을 선택해주세요.", "파일삭제", JOptionPane.WARNING_MESSAGE);		
-//		}		
-		
+		for(int i=0; i<select.length; i++) {
+			if(e.getSource() == select[i]) {
+				if(fileComponent.showSaveDialog(filechoose) == JFileChooser.APPROVE_OPTION) {
+					find = fileComponent.getSelectedFile().toString().lastIndexOf("\\");
+					last = fileComponent.getSelectedFile().toString().length();
+					txtField[i].setText(fileComponent.getSelectedFile().toString().substring(find + 1, last - 6) + "...");
+					where[i]=  fileComponent.getSelectedFile().toString();
+					System.out.println(dateformat.format(today)+" : "+(i+1)+"번째 파일 경로 "+where[i]);					
+				}
+			}
+		}
+						
 		
 // 제출 액션
 		if (e.getSource() == submit) {
@@ -228,7 +157,7 @@ public class Documents  extends WindowAdapter implements ActionListener{
 
 			MemberVo data = (MemberVo) check.get(0);
 			String email = data.getEmail();
-			System.out.println("-----------로그인유저 아이디 :"+email);
+			System.out.println(dateformat.format(today)+" : 로그인유저 아이디 : "+email);
 			
 			dao.fileposition(dao.checkUserId(inpid), where[0] ,where[1],where[2],where[3],where[4],where[5],where[6],where[7]);
 //			dao.fileposition("1001", where[0], where[1], where[2], where[3], where[4], where[5], where[6], where[7]);
