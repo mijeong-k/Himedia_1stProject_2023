@@ -19,6 +19,7 @@ public class Act {
 //		MngSearchDoc msd = new MngSearchDoc("1002");
 //		Idfind idf = new Idfind();
 //		Pwdfind pf = new Pwdfind();
+//		SystemManager sm = new SystemManager();
 
 	}
 
