@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class ManagerDAO {
 	String driver = "oracle.jdbc.driver.OracleDriver";
@@ -16,6 +18,8 @@ public class ManagerDAO {
 	private Connection con;
 	private Statement stmt;
 	private ResultSet rs;
+	private Date today = new Date();
+	private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd / hh:mm");
 
 	public ArrayList<ManagerVo> mnglist(String loginid) {
 		ArrayList<ManagerVo> mnglist = new ArrayList<ManagerVo>();
@@ -26,13 +30,13 @@ public class ManagerDAO {
 			if (loginid != null) {
 				query += " where MANAGER_EMAIL=TRIM('" + loginid + "')";
 			}
-			System.out.println("SQL : " + query);
+//			System.out.println("SQL : " + query);
 			rs = stmt.executeQuery(query);
 			rs.last();
 			if (rs.getRow() == 0) {
-				System.out.println("0 row selected.....");
+				System.out.println(dateformat.format(today)+" : 탐색결과 : 0 row selected.....");
 			} else {
-				System.out.println(rs.getRow() + " rows selected.....");
+//				System.out.println(rs.getRow() + " rows selected.....");
 				rs.previous();
 				while (rs.next()) {
 					String number = rs.getString("MANAGER_ID");
@@ -58,13 +62,13 @@ public class ManagerDAO {
 			if (mngcode != null) {
 				query += " where MANAGER_ID=TRIM('" + mngcode + "')";
 			}
-			System.out.println("SQL : " + query);
+//			System.out.println("SQL : " + query);
 			rs = stmt.executeQuery(query);
 			rs.last();
 			if (rs.getRow() == 0) {
-				System.out.println("0 row selected.....");
+				System.out.println(dateformat.format(today)+" : 탐색결과 : 0 row selected.....");
 			} else {
-				System.out.println(rs.getRow() + " rows selected.....");
+//				System.out.println(rs.getRow() + " rows selected.....");
 				rs.previous();
 				while (rs.next()) {
 					String number = rs.getString("MANAGER_ID");
@@ -180,12 +184,12 @@ public class ManagerDAO {
 			if (userid != null) {
 				query += " where USER_ID=TRIM('" + userid + "')";
 			}
-			System.out.println("SQL : " + query);
+//			System.out.println("SQL : " + query);
 			rs = stmt.executeQuery(query);
 			rs.last();
-			System.out.println("rs.getRow() : " + rs.getRow());
+//			System.out.println("rs.getRow() : " + rs.getRow());
 			if (rs.getRow() == 0) {
-				System.out.println("0 row selected.....");
+				System.out.println(dateformat.format(today)+" : 탐색결과 : 0 row selected.....");
 				String filename1 = "";
 				String filename2 = "";
 				String filename3 = "";
@@ -198,7 +202,7 @@ public class ManagerDAO {
 						filename7, filename8);
 				doclist.add(datalist);
 			} else {
-				System.out.println(rs.getRow() + " rows selected.....");
+//				System.out.println(rs.getRow() + " rows selected.....");
 				rs.previous();
 				while (rs.next()) {
 					String filename1 = rs.getString("filename1");
@@ -221,36 +225,6 @@ public class ManagerDAO {
 		return doclist;
 	}
 
-//	public ArrayList<MemberVo> check(String email) {
-//		ArrayList<MemberVo> check = new ArrayList<MemberVo>();
-//
-//		try {
-//			connDB();
-//			String query = "SELECT * FROM SUSER";
-//			if (email != null) {
-//				query += " where USER_EMAIL=TRIM('" + email + "')";
-//			}
-//			System.out.println("SQL : " + query);
-//			rs = stmt.executeQuery(query);
-//			rs.last();
-//			System.out.println("rs.getRow() : " + rs.getRow());
-//			if (rs.getRow() == 0) {
-//				System.out.println("0 row selected.....");
-//			} else {
-//				System.out.println(rs.getRow() + " rows selected.....");
-//				rs.previous();
-//				while (rs.next()) {
-//					String strid = rs.getString("USER_ID");
-//					MemberVo data = new MemberVo(strid);
-//					check.add(data);
-//				}
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//		return check;
-//	}
-
 	public void updateMng(String mngNum, String userid) {
 		try {
 			Class.forName(driver);
@@ -259,13 +233,13 @@ public class ManagerDAO {
 
 			String sql = "UPDATE USERREQUEST SET manager_id = " + "'" + mngNum + "', ismatch = 'Y' WHERE USER_ID = "
 					+ "'" + userid + "'";
-			System.out.println("--------------------------쿼리확인 : " + sql);
+//			System.out.println("--------------------------쿼리확인 : " + sql);
 			boolean b = stmt.execute(sql);
 
 		} catch (ClassNotFoundException e) {
-			System.out.println(e);
+//			System.out.println(e);
 		} catch (SQLException e) {
-			System.out.println(e);
+//			System.out.println(e);
 		}
 	}
 
@@ -277,13 +251,13 @@ public class ManagerDAO {
 
 			String sql = "UPDATE USERREQUEST SET fixguide = " + "'" + guide + "'" + " WHERE USER_ID = " + "'" + userid
 					+ "'";
-			System.out.println("--------------------------쿼리확인 : " + sql);
+//			System.out.println("--------------------------쿼리확인 : " + sql);
 			boolean b = stmt.execute(sql);
 
 		} catch (ClassNotFoundException e) {
-			System.out.println(e);
+//			System.out.println(e);
 		} catch (SQLException e) {
-			System.out.println(e);
+//			System.out.println(e);
 		}
 	}
 

@@ -1,6 +1,6 @@
 package semumanger;
 
-public class ManagerVo {
+public class ManagerVo extends MemberVo2 {
 	private String number, name, email, password;
 	private String userid, company, ceo, date, staff, mngid, match, guide;
 	private String usercode, filename1, filename2, filename3, filename4, filename5, filename6, filename7, filename8;

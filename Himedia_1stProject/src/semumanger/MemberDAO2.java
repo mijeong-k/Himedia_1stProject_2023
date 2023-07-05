@@ -31,12 +31,12 @@ public class MemberDAO2 {
 			if (email != null) {
 				query += " where USER_EMAIL=TRIM('" + email + "')";
 			}
-			System.out.println("SQL : " + query);
+//			System.out.println("SQL : " + query);
 			rs = stmt.executeQuery(query);
 			rs.last();
-			System.out.println("rs.getRow() : " + rs.getRow());
+//			System.out.println("rs.getRow() : " + rs.getRow());
 			if (rs.getRow() == 0) {
-				System.out.println("0 row selected.....");
+				System.out.println("탐색결과 : 0 row selected.....");
 				String rname = "의뢰내역 없음";
 				String company = "의뢰내역 없음";
 				String ceo = "의뢰내역 없음";
@@ -49,7 +49,7 @@ public class MemberDAO2 {
 				MemberVo2 datalist = new MemberVo2(rname, company, ceo, date, staff, manager, guide, mngName, mngEmail);
 				requestlist.add(datalist);
 			} else {
-				System.out.println(rs.getRow() + " rows selected.....");
+//				System.out.println(rs.getRow() + " rows selected.....");
 				rs.previous();
 				while (rs.next()) {
 					String rname = rs.getString("USER_NAME");
@@ -73,6 +73,7 @@ public class MemberDAO2 {
 					}
 				}
 			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -91,12 +92,12 @@ public class MemberDAO2 {
 			if (usercode != null) {
 				query += " where USER_ID=TRIM('" + usercode + "')";
 			}
-			System.out.println("SQL : " + query);
+//			System.out.println("SQL : " + query);
 			rs = stmt.executeQuery(query);
 			rs.last();
-			System.out.println("rs.getRow() : " + rs.getRow());
+//			System.out.println("rs.getRow() : " + rs.getRow());
 			if (rs.getRow() == 0) {
-				System.out.println("0 row selected.....");
+				System.out.println("탐색결과 : 0 row selected.....");
 				String rname = "의뢰내역 없음";
 				String company = "의뢰내역 없음";
 				String ceo = "의뢰내역 없음";
@@ -109,7 +110,7 @@ public class MemberDAO2 {
 				MemberVo2 datalist = new MemberVo2(rname, company, ceo, date, staff, manager, guide, mngName, mngEmail);
 				requestlist2.add(datalist);
 			} else {
-				System.out.println(rs.getRow() + " rows selected.....");
+//				System.out.println(rs.getRow() + " rows selected.....");
 				rs.previous();
 				while (rs.next()) {
 					String rname = rs.getString("USER_NAME");
@@ -151,12 +152,12 @@ public class MemberDAO2 {
 			if (userEmail != null) {
 				query += " where USER_EMAIL=TRIM('" + userEmail + "')";
 			}
-			System.out.println("SQL : " + query);
+//			System.out.println("SQL : " + query);
 			rs = stmt.executeQuery(query);
 			rs.last();
-			System.out.println("rs.getRow() : " + rs.getRow());
+//			System.out.println("rs.getRow() : " + rs.getRow());
 			if (rs.getRow() == 0) {
-				System.out.println("0 row selected.....");
+				System.out.println("탐색결과 : 0 row selected.....");
 				String filename1 = "";
 				String filename2 = "";
 				String filename3 = "";
@@ -168,7 +169,7 @@ public class MemberDAO2 {
 				MemberVo2 datalist = new MemberVo2(filename1, filename2, filename3, filename4, filename5, filename6, filename7, filename8);
 				doclist.add(datalist);
 			} else {
-				System.out.println(rs.getRow() + " rows selected.....");
+//				System.out.println(rs.getRow() + " rows selected.....");
 				rs.previous();
 				while (rs.next()) {
 					String filename1 = rs.getString("filename1");
@@ -193,12 +194,12 @@ public class MemberDAO2 {
 	public void connDB() {
 		try {
 			Class.forName(driver);
-			System.out.println("jdbc driver loading success.");
+//			System.out.println("jdbc driver loading success.");
 			con = DriverManager.getConnection(url, user, password);
-			System.out.println("oracle connection success.");
+//			System.out.println("oracle connection success.");
 			// stmt = con.createStatement();
 			stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-			System.out.println("statement create success.");
+//			System.out.println("statement create success.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
