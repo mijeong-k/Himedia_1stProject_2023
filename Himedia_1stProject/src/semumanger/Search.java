@@ -8,7 +8,9 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -31,6 +33,8 @@ public class Search extends WindowAdapter implements ActionListener, FocusListen
 	private boolean fixSwitch;
 	private JTextArea txtArea;
 	private JScrollPane scrollbar;
+	private Date today = new Date();
+	private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd / hh:mm");
 
 	public Search(String userID) {
 		this.userID = userID;
@@ -211,7 +215,7 @@ public class Search extends WindowAdapter implements ActionListener, FocusListen
 		MemberVo2 datalist = (MemberVo2) requestlist.get(0);
 
 		String rname = datalist.getRname();
-		System.out.println("--------------------------신청자정보-신청자명 확인 : " + rname);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 신청자명 : " + rname);
 		return rname;
 	}
 
@@ -223,7 +227,7 @@ public class Search extends WindowAdapter implements ActionListener, FocusListen
 		ArrayList<MemberVo2> requestlist = dao.requestlist(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist.get(0);
 		String company = datalist.getCompany();
-		System.out.println("--------------------------신청자정보-회사명 확인 : " + company);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 회사명 : " + company);
 
 		return company;
 	}
@@ -236,7 +240,7 @@ public class Search extends WindowAdapter implements ActionListener, FocusListen
 		ArrayList<MemberVo2> requestlist = dao.requestlist(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist.get(0);
 		String ceo = datalist.getCeo();
-		System.out.println("--------------------------신청자정보-대표자명 확인 : " + ceo);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 대표자명 : " + ceo);
 
 		return ceo;
 	}
@@ -249,7 +253,7 @@ public class Search extends WindowAdapter implements ActionListener, FocusListen
 		ArrayList<MemberVo2> requestlist = dao.requestlist(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist.get(0);
 		String date = datalist.getDate();
-		System.out.println("--------------------------신청자정보-설립일 확인 : " + date);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 설립일 : " + date);
 
 		return date;
 	}
@@ -262,7 +266,7 @@ public class Search extends WindowAdapter implements ActionListener, FocusListen
 		ArrayList<MemberVo2> requestlist = dao.requestlist(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist.get(0);
 		String staff = datalist.getStaff();
-		System.out.println("--------------------------신청자정보-직원수 확인 : " + staff);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 직원수 : " + staff);
 
 		return staff;
 	}
@@ -275,7 +279,7 @@ public class Search extends WindowAdapter implements ActionListener, FocusListen
 		ArrayList<MemberVo2> requestlist = dao.requestlist(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist.get(0);
 		String guide = datalist.getGuide();
-		System.out.println("--------------------------신청자정보-수정요청내역 확인 : " + guide);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 수정요청내역 : " + guide);
 
 		return guide;
 	}
@@ -288,7 +292,7 @@ public class Search extends WindowAdapter implements ActionListener, FocusListen
 		ArrayList<MemberVo2> requestlist = dao.requestlist(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist.get(0);
 		String mngName = datalist.getMngName();
-		System.out.println("--------------------------신청자정보-담당자명 확인 : " + mngName);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 담당자명 : " + mngName);
 
 		return mngName;
 	}
@@ -301,7 +305,7 @@ public class Search extends WindowAdapter implements ActionListener, FocusListen
 		ArrayList<MemberVo2> requestlist = dao.requestlist(inpid);
 		MemberVo2 datalist = (MemberVo2) requestlist.get(0);
 		String mngEmail = datalist.getMngEmail();
-		System.out.println("--------------------------신청자정보-담당자이메일 확인 : " + mngEmail);
+		System.out.println(dateformat.format(today)+" : <신청자정보> 담당자이메일 : " + mngEmail);
 
 		return mngEmail;
 	}
