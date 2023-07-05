@@ -9,8 +9,12 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
+import javax.crypto.SecretKey;
+import javax.crypto.spec.IvParameterSpec;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -26,9 +30,11 @@ public class Join extends WindowAdapter implements ActionListener, FocusListener
 	private JButton joinBt, loginBt, loginBtAfterJoin;
 	private MemberDAO dao;
 	private Dialog joingood;
+	private PasswordCode pwdcode;
 
 	public Join() {
-
+		pwdcode = new PasswordCode();
+		
 // DB 연동
 		dao = new MemberDAO();
 
@@ -159,13 +165,13 @@ public class Join extends WindowAdapter implements ActionListener, FocusListener
 
 			if (idTxt.getText().equals(null) || idTxt.getText().equals("")) {
 				JOptionPane.showMessageDialog(null, "이메일을 입력해주세요.", "이메일 공백", JOptionPane.WARNING_MESSAGE);
-				idTxt.addFocusListener(this);
+				idTxt.requestFocus(true);
 				return;
 			}
 			if (!idTxt.getText()
 					.matches("^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$")) {
 				JOptionPane.showMessageDialog(null, "이메일 형식을 지켜주세요.", "이메일형식 오류", JOptionPane.WARNING_MESSAGE);
-				idTxt.addFocusListener(this);
+				idTxt.requestFocus(true);
 				return;
 			}
 
@@ -199,8 +205,13 @@ public class Join extends WindowAdapter implements ActionListener, FocusListener
 				idTxt.requestFocus(true);
 				return;
 			}
-
-			dao.insert(dao.findUserId(), nameTxt.getText(), idTxt.getText(), pwTxt.getText(), phoneTxt.getText());
+			
+//			pwdcode.encrypt(pwTxt.getText());
+			dao.insert(dao.findUserId(), nameTxt.getText(), idTxt.getText(), pwdcode.encrypt(pwTxt.getText()), phoneTxt.getText());
+//			dao.insert(dao.findUserId(), nameTxt.getText(), idTxt.getText(), pwTxt.getText(), phoneTxt.getText());
+			Date today = new Date();
+			SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd / hh:mm");
+			System.out.println(dateformat.format(today)+" : <회원가입성공> ");
 			joingood.setVisible(true);
 		}
 

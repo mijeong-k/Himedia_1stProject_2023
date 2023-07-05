@@ -94,10 +94,10 @@ public class Idfind extends WindowAdapter implements ActionListener, FocusListen
 					JOptionPane.showMessageDialog(null, "이메일은 "+email.replaceAll("(?<=.{3}).(?=.*@)", "*")+" 입니다.", "이메일 안내",
 							JOptionPane.WARNING_MESSAGE);
 				} else {
-					JOptionPane.showMessageDialog(null, "성함과 번호가 일치하지 않습니다.", "확인 오류", JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(null, "일치하는 정보가 없습니다.", "확인 오류", JOptionPane.WARNING_MESSAGE);
 				}
 			} else {
-				JOptionPane.showMessageDialog(null, "성함과 번호가 일치하지 않습니다.", "확인 오류", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(null, "일치하는 정보가 없습니다.", "확인 오류", JOptionPane.WARNING_MESSAGE);
 			}
 		}
 	}

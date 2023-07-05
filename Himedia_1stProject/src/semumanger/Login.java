@@ -7,8 +7,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
+import javax.crypto.SecretKey;
+import javax.crypto.spec.IvParameterSpec;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -17,19 +21,25 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import testing1.EndodeingDecoding;
+
 public class Login extends WindowAdapter implements ActionListener {
 	private JFrame sort, userLogin, idFind, pwFind, home;
 	private JLabel logo, logo2, idLb, pwLb, failTitle, failMent;
 	private JTextField idTxt;
 	private JPasswordField pwTxt;
-	private JButton joinBt, idFindBt, pwFindBt, loginBt, userBt, adminBt, joinBt2, loginBt2;
+	private JButton joinBt, idFindBt, pwFindBt, loginBt, userBt, adminBt, sysmngBt, joinBt2, loginBt2;
 	private Icon logoicon, logoicon2;
 	private Dialog loginfail;
 	private MemberDAO dao;
 	private String userID;	
-
+	private Date today = new Date();
+	private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd / hh:mm");
+	private PasswordCode pwdcode;
+	
 	public Login() {
-
+		pwdcode = new PasswordCode();
+		
 //사용자로그인,관리자로그인 sorting 화면
 		sort = new JFrame("세무매니저");
 		sort.setSize(400, 400);
@@ -41,8 +51,10 @@ public class Login extends WindowAdapter implements ActionListener {
 
 		userBt = new JButton("사용자 로그인");
 		adminBt = new JButton("담당자 로그인");
+		sysmngBt = new JButton("관리자 로그인");
 		userBt.setBounds(70, 200, 120, 30);
 		adminBt.setBounds(200, 200, 120, 30);
+		sysmngBt.setBounds(70, 240, 250, 30);
 
 // 사용자로그인 화면 구현
 		userLogin = new JFrame("세무매니저 사용자로그인");
@@ -106,6 +118,7 @@ public class Login extends WindowAdapter implements ActionListener {
 		userLogin.add(loginBt);
 		sort.add(userBt);
 		sort.add(adminBt);
+		sort.add(sysmngBt);
 		loginfail.add(failMent);
 		loginfail.add(failTitle);
 		loginfail.add(joinBt2);
@@ -119,6 +132,7 @@ public class Login extends WindowAdapter implements ActionListener {
 		sort.addWindowListener(this);
 		userLogin.addWindowListener(this);
 		adminBt.addActionListener(this);
+		sysmngBt.addActionListener(this);
 		loginfail.addWindowListener(this);
 		idFindBt.addActionListener(this);
 		pwFindBt.addActionListener(this);
@@ -165,6 +179,11 @@ public class Login extends WindowAdapter implements ActionListener {
 			MngLogin ml = new MngLogin();
 		}
 		
+		if (e.getSource() == sysmngBt) {
+			sort.setVisible(false);
+			SystemManager sm = new SystemManager();
+		}
+		
 		if (e.getSource() == joinBt) {
 			userLogin.setVisible(false);
 			Join jo = new Join();
@@ -179,7 +198,7 @@ public class Login extends WindowAdapter implements ActionListener {
 		}	
 		
 		if (e.getSource() == loginBt) {
-			System.out.println(idTxt.getText() + pwTxt.getText());
+//			System.out.println(idTxt.getText() + pwTxt.getText());
 			String inpid = idTxt.getText();
 			ArrayList<MemberVo> list = dao.list(inpid);
 
@@ -187,16 +206,24 @@ public class Login extends WindowAdapter implements ActionListener {
 				MemberVo data = (MemberVo) list.get(0);
 				String id = data.getId();
 				String pwd = data.getPassword();
-				System.out.println(id + " : " + pwd);
-
-				if (pwTxt.getText().equals(pwd)) {
-					userID = id;
-					Home ho = new Home(userID);	
-					userLogin.setVisible(false);
-					
-				} else {
-					loginfail.setVisible(true);
-				}
+				
+					if (pwTxt.getText().equals(pwdcode.decrypt(pwd))) {
+						System.out.println(dateformat.format(today)+" : <로그인성공> "+ id + " : " + pwd);
+						userID = id;
+						Home ho = new Home(userID);	
+						userLogin.setVisible(false);
+					}else {
+						loginfail.setVisible(true);
+					}		
+//				
+//				if (pwTxt.getText().equals(pwd)) {
+//					userID = id;
+//					Home ho = new Home(userID);	
+//					userLogin.setVisible(false);
+//					
+//				} else {
+//					loginfail.setVisible(true);
+//				}
 
 			} else {
 				loginfail.setVisible(true);

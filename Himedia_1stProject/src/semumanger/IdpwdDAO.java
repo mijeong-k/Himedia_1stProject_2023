@@ -5,7 +5,9 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 import javax.swing.JOptionPane;
 
@@ -18,20 +20,20 @@ public class IdpwdDAO {
 	private Connection con;
 	private Statement stmt;
 	private ResultSet rs;
+	private Date today = new Date();
+	private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd / hh:mm");
 
 	public ArrayList<IdpwdVo> list(String name, String phone) {
 		ArrayList<IdpwdVo> list = new ArrayList<IdpwdVo>();
 		try {
 			connDB();
 			String query = "SELECT * FROM SUSER where USER_NAME=TRIM('" + name + "') and USER_CON = "+"'"+phone+"'";
-			System.out.println("SQL : " + query);
 			rs = stmt.executeQuery(query);
 			rs.last();
-			System.out.println("rs.getRow() : " + rs.getRow());
 			if (rs.getRow() == 0) {
-				System.out.println("0 row selected.....");
+				System.out.println(dateformat.format(today)+" : 탐색결과 : 0 row selected.....");
 			} else {
-				System.out.println(rs.getRow() + " rows selected.....");
+//				System.out.println("탐색결과 : "+ rs.getRow() + " rows selected.....");
 				rs.previous();
 				while (rs.next()) {
 					String username = rs.getString("USER_NAME");
@@ -53,14 +55,13 @@ public class IdpwdDAO {
 		try {
 			connDB();
 			String query = "SELECT * FROM SUSER where USER_NAME=TRIM('" + name + "') and USER_EMAIL = "+"'"+email+"'";
-			System.out.println("SQL : " + query);
 			rs = stmt.executeQuery(query);
 			rs.last();
-			System.out.println("rs.getRow() : " + rs.getRow());
+//			System.out.println("rs.getRow() : " + rs.getRow());
 			if (rs.getRow() == 0) {
-				System.out.println("0 row selected.....");
+				System.out.println(dateformat.format(today)+" : 탐색결과 : 0 row selected.....");
 			} else {
-				System.out.println(rs.getRow() + " rows selected.....");
+//				System.out.println(rs.getRow() + " rows selected.....");
 				rs.previous();
 				while (rs.next()) {
 					String username = rs.getString("USER_NAME");
@@ -84,7 +85,6 @@ public class IdpwdDAO {
 			Statement stmt = conn.createStatement();
 
 			String sql = "UPDATE SUSER SET USER_PWD = " + "'" + repwd + "' WHERE USER_EMAIL = " + "'" + email + "'";
-			System.out.println("--------------------------쿼리확인 : " + sql);
 			boolean b = stmt.execute(sql);
 
 		} catch (ClassNotFoundException e) {
@@ -97,12 +97,12 @@ public class IdpwdDAO {
 	public void connDB() {
 		try {
 			Class.forName(driver);
-			System.out.println("jdbc driver loading success.");
+//			System.out.println("jdbc driver loading success.");
 			con = DriverManager.getConnection(url, user, password);
-			System.out.println("oracle connection success.");
+//			System.out.println("oracle connection success.");
 			// stmt = con.createStatement();
 			stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
-			System.out.println("statement create success.");
+//			System.out.println("statement create success.");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

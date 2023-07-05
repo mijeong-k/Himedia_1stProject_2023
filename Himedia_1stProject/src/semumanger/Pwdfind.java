@@ -24,8 +24,10 @@ public class Pwdfind extends WindowAdapter implements ActionListener, FocusListe
 	private JTextField name, email, pwd, repwd;
 	private JButton ok, change;
 	private JDialog pwdchange;
+	private PasswordCode pwdcode;
 	
 	public Pwdfind() {
+		pwdcode = new PasswordCode();
 		dao = new IdpwdDAO();
 
 		pff = new JFrame("비밀번호 찾기");
@@ -150,7 +152,8 @@ public class Pwdfind extends WindowAdapter implements ActionListener, FocusListe
 				return;
 			}
 			if(pwd.getText().equals(repwd.getText())){
-				dao.updatePwd(email.getText(), repwd.getText());			
+				dao.updatePwd(email.getText(), pwdcode.encrypt(repwd.getText()));
+//				dao.updatePwd(email.getText(), repwd.getText());			
 				JOptionPane.showMessageDialog(null, "비밀번호 재설정 완료", "재설정 완료", JOptionPane.WARNING_MESSAGE);
 				return;
 			}			
