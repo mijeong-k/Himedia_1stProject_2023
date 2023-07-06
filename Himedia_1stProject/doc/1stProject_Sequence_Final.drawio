@@ -1,0 +1,1014 @@
+<mxfile host="app.diagrams.net" modified="2023-07-05T09:26:25.155Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="R_UXRJjYYJL7RoqQfRzT" version="21.5.2" type="device">
+  <diagram name="페이지-1" id="BOG7XvdRd_XsbFsJwtds">
+    <mxGraphModel dx="1687" dy="1078" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-26" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=-0.003;exitY=0.499;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.004;entryY=0.499;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230.10000000000002" y="449.99999999999994" as="sourcePoint" />
+            <mxPoint x="532.2" y="449.99999999999994" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3Qc_dx9rd3QwC0fSJZI-2" value="계정선택" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="180" y="190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-1" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="e3Qc_dx9rd3QwC0fSJZI-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="610" as="sourcePoint" />
+            <mxPoint x="310" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-2" value="사용자" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="50" y="190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-3" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-2" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="610" as="sourcePoint" />
+            <mxPoint x="180" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-5" value="1.실행&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;(사용자/담당자)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="90" y="260" as="sourcePoint" />
+            <mxPoint x="210" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-8" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="215" y="236" width="10" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-6" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="221" y="271" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-7" value="2.사용자&lt;br&gt;로그인&lt;br&gt;화면출력" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="225" y="261.0344827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="250" y="261" />
+              <mxPoint x="250" y="280" />
+            </Array>
+            <mxPoint x="233" y="280.0344827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-10" value="회원정보DB" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="430" y="190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-11" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="2sbaOQLauqhKjB1J0AwE-12" target="2sbaOQLauqhKjB1J0AwE-10" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="500" as="sourcePoint" />
+            <mxPoint x="560" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-13" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-12" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="610" as="sourcePoint" />
+            <mxPoint x="470" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-12" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="465" y="315" width="10" height="265" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-14" value="4.DB정보전송" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="350" y="340" as="sourcePoint" />
+            <mxPoint x="460" y="340.17" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-16" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="471" y="350" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-17" value="5.DB정보&lt;br&gt;&amp;nbsp;검색" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="475" y="340.0344827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="500" y="340" />
+              <mxPoint x="500" y="359" />
+            </Array>
+            <mxPoint x="483" y="359.0344827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-20" value="사용자 홈메뉴" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="310" y="190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-21" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-20" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="610" as="sourcePoint" />
+            <mxPoint x="440" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-25" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="345" y="236" width="10" height="344" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-23" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" parent="1" vertex="1">
+          <mxGeometry x="231" y="400" width="300" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-24" value="6.로그인 승인" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="465" y="430.41" as="sourcePoint" />
+            <mxPoint x="360" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-9" value="3.ID,PW 입력" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="230" y="320" as="sourcePoint" />
+            <mxPoint x="340" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-27" value="7.입력정보 오류" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="465" y="480.41" as="sourcePoint" />
+            <mxPoint x="360" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-28" value="8.회원가입 요청" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="360" y="510" as="sourcePoint" />
+            <mxPoint x="460" y="510.34000000000003" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-29" value="9.DB정보&lt;br&gt;추가" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="475" y="510.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="500" y="509.97" />
+              <mxPoint x="500" y="528.97" />
+            </Array>
+            <mxPoint x="483" y="529.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-30" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="471" y="519.97" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-31" value="9.회원가입&amp;nbsp; 승인" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="2sbaOQLauqhKjB1J0AwE-30" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="465" y="546.1724137931035" as="sourcePoint" />
+            <mxPoint x="360" y="546" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-32" value="[로그인 성공]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" parent="1" vertex="1">
+          <mxGeometry x="276" y="422" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-33" value="[로그인 실패]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" parent="1" vertex="1">
+          <mxGeometry x="276" y="450" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-92" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=-0.008;exitY=0.547;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.997;entryY=0.55;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130.00200000000007" y="960.0000000000001" as="sourcePoint" />
+            <mxPoint x="522.957" y="960.6" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-93" value="신고의뢰메뉴&lt;br&gt;(주요정보)" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="180" y="660" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-94" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="1030" as="sourcePoint" />
+            <mxPoint x="220" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-95" value="사용자" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="50" y="660" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-96" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="1030" as="sourcePoint" />
+            <mxPoint x="90" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-97" value="1.실행" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="90" y="730" as="sourcePoint" />
+            <mxPoint x="210" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-98" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="215" y="706" width="10" height="284" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-99" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="221" y="741" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-100" value="2.정보입력&lt;br&gt;화면 출력" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="225" y="731.0344827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="250" y="731" />
+              <mxPoint x="250" y="750" />
+            </Array>
+            <mxPoint x="233" y="750.0344827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-101" value="회원정보DB" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="430" y="660" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-102" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="2sbaOQLauqhKjB1J0AwE-104" target="2sbaOQLauqhKjB1J0AwE-101" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="970" as="sourcePoint" />
+            <mxPoint x="560" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-103" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="1030" as="sourcePoint" />
+            <mxPoint x="470" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-104" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="465" y="800" width="10" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-108" value="신고의뢰메뉴&lt;br&gt;(문서제출)" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="310" y="660" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-109" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="1030" as="sourcePoint" />
+            <mxPoint x="350" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-110" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="345" y="770" width="10" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-111" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" parent="1" vertex="1">
+          <mxGeometry x="140" y="760" width="391" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-112" value="4.저장성공" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-98" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345" y="818.07" as="sourcePoint" />
+            <mxPoint x="240" y="817.66" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-113" value="3.저장및다음" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0906" width="80" relative="1" as="geometry">
+            <mxPoint x="230" y="790" as="sourcePoint" />
+            <mxPoint x="340" y="790" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-114" value="7.입력정보 오류" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345" y="979.9975862068964" as="sourcePoint" />
+            <mxPoint x="225" y="980.1699999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-115" value="5.DB정보전송" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-104" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="225" y="840.17" as="sourcePoint" />
+            <mxPoint x="325" y="840.51" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-119" value="[저장성공]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" parent="1" vertex="1">
+          <mxGeometry x="140" y="930" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-120" value="[저장실패]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" parent="1" vertex="1">
+          <mxGeometry x="140" y="960" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-121" value="8.문서저장및제출" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="-0.1818" width="80" relative="1" as="geometry">
+            <mxPoint x="355" y="910" as="sourcePoint" />
+            <mxPoint x="465" y="910" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-122" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;exitX=-0.008;exitY=0.547;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.997;entryY=0.55;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="130.00200000000007" y="1630" as="sourcePoint" />
+            <mxPoint x="522.957" y="1630.6" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-123" value="의뢰내역조회&lt;br&gt;(주요정보)" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="180" y="1190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-124" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-123" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="1780" as="sourcePoint" />
+            <mxPoint x="220" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-125" value="사용자" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="50" y="1190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-126" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-125" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="1780" as="sourcePoint" />
+            <mxPoint x="90" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-127" value="1.실행" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="90" y="1260" as="sourcePoint" />
+            <mxPoint x="210" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-128" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="215" y="1236" width="10" height="514" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-131" value="회원정보DB" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="430" y="1190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-132" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="2sbaOQLauqhKjB1J0AwE-134" target="2sbaOQLauqhKjB1J0AwE-131" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="1500" as="sourcePoint" />
+            <mxPoint x="560" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-133" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="470" y="1780" as="sourcePoint" />
+            <mxPoint x="470" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-134" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="465" y="1280" width="10" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-135" value="의뢰내역조회&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;(제출문서)" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="310" y="1190" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-136" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-135" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="1780" as="sourcePoint" />
+            <mxPoint x="350" y="1260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-137" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="345" y="1280" width="10" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-138" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1320" width="391" height="440" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-139" value="4.입력정보출력" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="2sbaOQLauqhKjB1J0AwE-146" edge="1">
+          <mxGeometry x="0.5618" relative="1" as="geometry">
+            <mxPoint x="345" y="1327.97" as="sourcePoint" />
+            <mxPoint x="225" y="1328.003448275862" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-140" value="2.DB정보검색" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="-0.6669" width="80" relative="1" as="geometry">
+            <mxPoint x="230" y="1290.17" as="sourcePoint" />
+            <mxPoint x="460" y="1290" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-141" value="15.입력정보 없음" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345" y="1659.9975862068964" as="sourcePoint" />
+            <mxPoint x="225" y="1660.1699999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-143" value="[신고내역O]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1600" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-144" value="[신고내역X]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" parent="1" vertex="1">
+          <mxGeometry x="140" y="1630" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-145" value="5.수정 및 저장(DB정보 전송)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-134" edge="1">
+          <mxGeometry x="-0.4028" width="80" relative="1" as="geometry">
+            <mxPoint x="230" y="1392" as="sourcePoint" />
+            <mxPoint x="340" y="1392" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-146" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="471" y="1299.97" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-147" value="3.DB정보&lt;br&gt;연동" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="475" y="1290.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="500" y="1289.97" />
+              <mxPoint x="500" y="1308.97" />
+            </Array>
+            <mxPoint x="483" y="1309.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-148" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="471" y="1401.97" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-149" value="6.DB정보&lt;br&gt;업데이트" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="475" y="1392.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="500" y="1391.97" />
+              <mxPoint x="500" y="1410.97" />
+            </Array>
+            <mxPoint x="483" y="1411.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-150" value="7.다음(문서조회)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="226" y="1415.63" as="sourcePoint" />
+            <mxPoint x="346" y="1415.63" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-151" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="351" y="1424.94" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-152" value="8.문서정보&lt;br&gt;출력" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="355" y="1414.9744827586208" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="380" y="1414.94" />
+              <mxPoint x="380" y="1433.94" />
+            </Array>
+            <mxPoint x="363" y="1433.9744827586208" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-153" value="9.삭제" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="355" y="1470.44" as="sourcePoint" />
+            <mxPoint x="460" y="1470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-154" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="471" y="1479.97" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-155" value="10.DB정보&lt;br&gt;삭제" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="475" y="1470.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="500" y="1469.97" />
+              <mxPoint x="500" y="1488.97" />
+            </Array>
+            <mxPoint x="483" y="1489.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-156" value="11.열기및저장" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="355" y="1520.44" as="sourcePoint" />
+            <mxPoint x="460" y="1520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-157" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="471" y="1529.97" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-158" value="12.DB정보&lt;br&gt;업데이트" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="475" y="1520.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="500" y="1519.97" />
+              <mxPoint x="500" y="1538.97" />
+            </Array>
+            <mxPoint x="483" y="1539.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-159" value="16.다음(문서조회)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="226" y="1690" as="sourcePoint" />
+            <mxPoint x="346" y="1690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-160" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="351" y="1699.97" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-161" value="17.문서정보&lt;br&gt;없음" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="355" y="1690.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="380" y="1689.97" />
+              <mxPoint x="380" y="1708.97" />
+            </Array>
+            <mxPoint x="363" y="1709.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-163" value="의뢰내역조회&lt;br&gt;(주요정보)" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="150" y="2360" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-164" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="2910" as="sourcePoint" />
+            <mxPoint x="190" y="2390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-165" value="담당자" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="20" y="2360" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-166" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="2910" as="sourcePoint" />
+            <mxPoint x="60" y="2390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-167" value="1.로그인" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="60" y="2430" as="sourcePoint" />
+            <mxPoint x="180" y="2430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-168" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="185" y="2406" width="10" height="474" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-169" value="회원정보DB" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="680" y="2360" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-170" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="2sbaOQLauqhKjB1J0AwE-172" target="2sbaOQLauqhKjB1J0AwE-169" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="2670" as="sourcePoint" />
+            <mxPoint x="810" y="2610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-171" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="2910" as="sourcePoint" />
+            <mxPoint x="720" y="2570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-172" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="715" y="2450" width="10" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-173" value="내역상세조회&lt;br&gt;(주요정보)" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="280" y="2360" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-174" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="2910" as="sourcePoint" />
+            <mxPoint x="320" y="2390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-175" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="315" y="2450" width="10" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-182" value="6.DB정보검색" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="2sbaOQLauqhKjB1J0AwE-175" target="2sbaOQLauqhKjB1J0AwE-172" edge="1">
+          <mxGeometry x="-0.7692" y="2" width="80" relative="1" as="geometry">
+            <mxPoint x="310" y="2562" as="sourcePoint" />
+            <mxPoint x="310" y="2562" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="330" y="2562" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-183" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="721" y="2469.9700000000003" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-184" value="3.DB정보&lt;br&gt;연동" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="725" y="2460.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="750" y="2459.9700000000003" />
+              <mxPoint x="750" y="2478.9700000000003" />
+            </Array>
+            <mxPoint x="733" y="2479.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-185" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="721" y="2571.9700000000003" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-186" value="7.DB정보&lt;br&gt;조회" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="725" y="2562.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="750" y="2561.9700000000003" />
+              <mxPoint x="750" y="2580.9700000000003" />
+            </Array>
+            <mxPoint x="733" y="2581.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-190" value="9.다음(문서조회)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;entryX=-0.5;entryY=0.45;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-201" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="2628.1000000000004" as="sourcePoint" />
+            <mxPoint x="430" y="2627.66" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-193" value="10.문서다운" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="2660.44" as="sourcePoint" />
+            <mxPoint x="440" y="2660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-194" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="721" y="2765.9700000000003" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-195" value="14.DB정보&lt;br&gt;업데이트" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="725" y="2756.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="750" y="2755.9700000000003" />
+              <mxPoint x="750" y="2774.9700000000003" />
+            </Array>
+            <mxPoint x="733" y="2775.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-199" value="내역상세조회&lt;br&gt;(제출문서)" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="410" y="2360" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-200" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="2910" as="sourcePoint" />
+            <mxPoint x="450" y="2390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-201" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="445" y="2450" width="10" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-213" value="담당자설정" style="html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="540" y="2360" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-214" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="2910" as="sourcePoint" />
+            <mxPoint x="580" y="2390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-215" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="575" y="2450" width="10" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-178" value="2.DB정보검색" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-172" edge="1">
+          <mxGeometry x="-0.6669" width="80" relative="1" as="geometry">
+            <mxPoint x="200" y="2460.17" as="sourcePoint" />
+            <mxPoint x="430" y="2460" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-177" value="4.입력정보출력" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" source="2sbaOQLauqhKjB1J0AwE-183" edge="1">
+          <mxGeometry x="0.7931" relative="1" as="geometry">
+            <mxPoint x="316" y="2497.9700000000003" as="sourcePoint" />
+            <mxPoint x="196" y="2498.003448275862" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-220" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="471" y="849.97" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-221" value="6.DB정보&lt;br&gt;업데이트" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="475" y="840.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="500" y="839.97" />
+              <mxPoint x="500" y="858.97" />
+            </Array>
+            <mxPoint x="483" y="859.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-222" value="5.상세조회(정보)" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="196" y="2530" as="sourcePoint" />
+            <mxPoint x="316" y="2530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-223" value="8.신고정보출력" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-175" edge="1">
+          <mxGeometry x="0.7728" relative="1" as="geometry">
+            <mxPoint x="721" y="2600.34" as="sourcePoint" />
+            <mxPoint x="196" y="2600.343448275862" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-224" value="13.문서다운" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="355" y="1570.44" as="sourcePoint" />
+            <mxPoint x="460" y="1570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-225" value="14.문서저장" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="466" y="1599.9975862068964" as="sourcePoint" />
+            <mxPoint x="360" y="1600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-227" value="11.문서저장" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="445" y="2689.9975862068964" as="sourcePoint" />
+            <mxPoint x="325" y="2690.17" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-228" value="12.담당자설정 실행" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="-0.7103" width="80" relative="1" as="geometry">
+            <mxPoint x="196" y="2720.28" as="sourcePoint" />
+            <mxPoint x="570" y="2720" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-229" value="13.담당자설정" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="585" y="2754.93" as="sourcePoint" />
+            <mxPoint x="710" y="2755" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-230" value="14.설정완료" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="731" y="2793.967586206896" as="sourcePoint" />
+            <mxPoint x="590" y="2794" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-231" value="15.수정요청" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-172" edge="1">
+          <mxGeometry x="-0.8204" width="80" relative="1" as="geometry">
+            <mxPoint x="325" y="2830.44" as="sourcePoint" />
+            <mxPoint x="440" y="2830" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-232" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="721" y="2839.9700000000003" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-233" value="16.DB정보&lt;br&gt;업데이트" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="725" y="2830.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="750" y="2829.9700000000003" />
+              <mxPoint x="750" y="2848.9700000000003" />
+            </Array>
+            <mxPoint x="733" y="2849.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-234" value="17.수정요청사항반영" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="731" y="2868.107586206896" as="sourcePoint" />
+            <mxPoint x="590" y="2868.14" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-236" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="471" y="919.97" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-237" value="9.DB정보&lt;br&gt;업데이트" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="475" y="910.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="500" y="909.97" />
+              <mxPoint x="500" y="928.97" />
+            </Array>
+            <mxPoint x="483" y="929.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2sbaOQLauqhKjB1J0AwE-238" value="10.저장및제출성공" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" parent="1" target="2sbaOQLauqhKjB1J0AwE-110" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="471" y="948.0699999999999" as="sourcePoint" />
+            <mxPoint x="360" y="948.0699999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-31" value="" style="endArrow=none;html=1;strokeWidth=1;rounded=0;exitX=-0.008;exitY=0.547;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1;entryY=0.686;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="qfsqMmarITc58uPcN6Ge-84">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="111.00200000000007" y="3934.5" as="sourcePoint" />
+            <mxPoint x="691" y="3935.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-32" value="관리자홈" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="160" y="3570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-33" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="4130" as="sourcePoint" />
+            <mxPoint x="200" y="3600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-34" value="관리자" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="30" y="3570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-35" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="4130" as="sourcePoint" />
+            <mxPoint x="70" y="3600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-36" value="1.로그인" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="70" y="3640" as="sourcePoint" />
+            <mxPoint x="190" y="3640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-37" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="195" y="3616" width="10" height="344" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-38" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="201" y="3651" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-39" value="2.화면 출력" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="205" y="3641.0344827586205" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="230" y="3641" />
+              <mxPoint x="230" y="3660" />
+            </Array>
+            <mxPoint x="213" y="3660.0344827586205" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-40" value="회원정보DB" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="560" y="3570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-41" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="qfsqMmarITc58uPcN6Ge-43" target="qfsqMmarITc58uPcN6Ge-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="3880" as="sourcePoint" />
+            <mxPoint x="690" y="3820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-42" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="4130" as="sourcePoint" />
+            <mxPoint x="599.9999999999998" y="3670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-43" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="595" y="3680" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-44" value="사용자목록" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="290" y="3570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-45" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="4130" as="sourcePoint" />
+            <mxPoint x="330" y="3600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-46" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="325" y="3680" width="10" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-49" value="3.사용자목록조회" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0906" width="80" relative="1" as="geometry">
+            <mxPoint x="210" y="3700" as="sourcePoint" />
+            <mxPoint x="320" y="3700" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-52" value="[추가성공]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="1">
+          <mxGeometry x="120" y="3890" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-53" value="[추가실패]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="1">
+          <mxGeometry x="120" y="3934" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-54" value="6.담당자목록조회" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="qfsqMmarITc58uPcN6Ge-70">
+          <mxGeometry x="-0.5651" width="80" relative="1" as="geometry">
+            <mxPoint x="206" y="3786.58" as="sourcePoint" />
+            <mxPoint x="316" y="3786.58" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-60" value="담당자정보DB" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="670" y="3570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-61" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" source="qfsqMmarITc58uPcN6Ge-63" target="qfsqMmarITc58uPcN6Ge-60" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="3880" as="sourcePoint" />
+            <mxPoint x="800" y="3820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-62" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="710" y="4130" as="sourcePoint" />
+            <mxPoint x="710" y="3710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-63" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="705" y="3710" width="10" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-50" value="10.추가 성공" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.9;exitY=1.072;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" target="qfsqMmarITc58uPcN6Ge-70">
+          <mxGeometry x="0.4768" y="1" relative="1" as="geometry">
+            <mxPoint x="720.0000000000002" y="3887.986" as="sourcePoint" />
+            <mxPoint x="470" y="3888" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-66" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="711" y="3856.97" width="10" height="50.03" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-67" value="9.DB정보&lt;br&gt;업데이트" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="715" y="3850.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="740" y="3849.9700000000003" />
+              <mxPoint x="740" y="3868.9700000000003" />
+            </Array>
+            <mxPoint x="723" y="3869.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-68" value="담당자목록" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="420" y="3570" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-69" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="4130" as="sourcePoint" />
+            <mxPoint x="460" y="3600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-70" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="455" y="3680" width="10" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-71" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="331" y="3728" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-72" value="5.화면 출력" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="335" y="3718.0344827586205" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="360" y="3718" />
+              <mxPoint x="360" y="3737" />
+            </Array>
+            <mxPoint x="343" y="3737.0344827586205" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-73" value="4.사용자DB조회" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.6" width="80" relative="1" as="geometry">
+            <mxPoint x="340" y="3700" as="sourcePoint" />
+            <mxPoint x="590" y="3700" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-77" value="7.담당자DB조회" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.6" width="80" relative="1" as="geometry">
+            <mxPoint x="469" y="3788" as="sourcePoint" />
+            <mxPoint x="704" y="3787.9700000000003" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-78" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="461" y="3812" width="10" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-79" value="8. 화면 출력" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="465" y="3802.0344827586205" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="490" y="3802" />
+              <mxPoint x="490" y="3821" />
+            </Array>
+            <mxPoint x="473" y="3821.0344827586205" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-82" value="9.담당자추가" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.4805" width="80" relative="1" as="geometry">
+            <mxPoint x="470" y="3850" as="sourcePoint" />
+            <mxPoint x="701" y="3850" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-83" value="11. 입력정보 오류" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1" target="qfsqMmarITc58uPcN6Ge-70">
+          <mxGeometry x="0.4837" y="15" relative="1" as="geometry">
+            <mxPoint x="701" y="3905" as="sourcePoint" />
+            <mxPoint x="482" y="3904.66" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="3905" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-84" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="3860" width="690" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-85" value="12.담당자삭제" style="html=1;verticalAlign=bottom;endArrow=block;edgeStyle=elbowEdgeStyle;elbow=horizontal;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.4805" width="80" relative="1" as="geometry">
+            <mxPoint x="470" y="4000" as="sourcePoint" />
+            <mxPoint x="701" y="4000" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-88" value="13.삭제 성공" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;exitX=0.9;exitY=1.072;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry x="0.4768" y="1" relative="1" as="geometry">
+            <mxPoint x="720.0000000000002" y="4040.326" as="sourcePoint" />
+            <mxPoint x="465" y="4040.34" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-86" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="711" y="4006.97" width="10" height="50.03" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-87" value="13.DB정보&lt;br&gt;업데이트" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0061" relative="1" as="geometry">
+            <mxPoint x="715" y="4000.0044827586207" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="740" y="3999.9700000000003" />
+              <mxPoint x="740" y="4018.9700000000003" />
+            </Array>
+            <mxPoint x="723" y="4019.0044827586207" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-89" value="14. 입력정보 오류" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;edgeStyle=elbowEdgeStyle;elbow=vertical;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.4837" y="15" relative="1" as="geometry">
+            <mxPoint x="701" y="4057.34" as="sourcePoint" />
+            <mxPoint x="465" y="4057.34" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="4057.34" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-90" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="3980" width="690" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-91" value="[삭제실패]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="1">
+          <mxGeometry x="120" y="4040" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="qfsqMmarITc58uPcN6Ge-92" value="[삭제성공]" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=7;" vertex="1" parent="1">
+          <mxGeometry x="120" y="4010" width="70" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
