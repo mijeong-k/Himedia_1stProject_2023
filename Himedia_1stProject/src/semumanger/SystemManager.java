@@ -116,7 +116,8 @@ public class SystemManager extends WindowAdapter implements ActionListener {
 		mngadd.setSize(330, 300);
 		mngadd.setLayout(null);
 		
-		addment = new JLabel("추가하려는 담당자 성함과 이메일을 입력하세요.");
+		addment = new JLabel("추가할 담당자 이름과 이메일을 입력하세요.");
+		addment.setForeground(Color.white);
 		addment.setBounds(32, 60, 250, 30);		
 		nameTxt = new JTextField();
 		nameTxt.setBounds(32, 90, 250, 30);
@@ -126,6 +127,7 @@ public class SystemManager extends WindowAdapter implements ActionListener {
 		add.setBounds(32, 150, 250, 30);
 
 		deletement = new JLabel("삭제하려는 담당자 사번을 입력하세요.");
+		deletement.setForeground(Color.white);
 		deletement.setBounds(32, 200, 250, 30);		
 		mngcodeTxt = new JTextField();
 		mngcodeTxt.setBounds(32, 230, 250, 30);	
@@ -152,20 +154,19 @@ public class SystemManager extends WindowAdapter implements ActionListener {
 		home.addWindowListener(this);
 		userlistf.addWindowListener(this);
 		mngedit.addWindowListener(this);
+		mnglistf.addWindowListener(this);
 		login.addActionListener(this);
 		ulBt.addActionListener(this);
 		mlBt.addActionListener(this);
 		maBt.addActionListener(this);
 		add.addActionListener(this);
 		delete.addActionListener(this);
-		userlistf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		mnglistf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		smf.getContentPane().setBackground(Color.black);
 		home.getContentPane().setBackground(Color.black);
 		userlistf.getContentPane().setBackground(Color.black);
 		mnglistf.getContentPane().setBackground(Color.black);
-		smf.setVisible(true);
+		mngedit.getContentPane().setBackground(Color.black);		
 		smf.setResizable(false);
 		smf.setLocationRelativeTo(null);
 		home.setResizable(false);
@@ -178,17 +179,18 @@ public class SystemManager extends WindowAdapter implements ActionListener {
 		mngedit.setLocationRelativeTo(null);
 		mngadd.setResizable(false);
 		mngadd.setLocationRelativeTo(null);
+		smf.setVisible(true);
 	}
 
 	public void windowClosing(WindowEvent e) {
 		if (e.getComponent() == home) {
-			home.dispose();
+			System.exit(0);
 		} else if (e.getComponent() == userlistf) {
 			userlistf.dispose();
-		} else if (e.getComponent() == smf) {
-			smf.dispose();
 		} else if (e.getComponent() == mngedit) {
 			mngedit.dispose();
+		} else if(e.getComponent() == mnglistf){
+			mnglistf.dispose();
 		} else {
 			System.exit(0);
 		}
@@ -241,7 +243,7 @@ public class SystemManager extends WindowAdapter implements ActionListener {
 			}
 
 			dao.insert(nameTxt.getText(), emailTxt.getText());
-			JOptionPane.showMessageDialog(null, "담당자 추가 성공", "추가성공", JOptionPane.OK_OPTION);
+			JOptionPane.showMessageDialog(null, "담당자 추가 성공", "추가성공", JOptionPane.INFORMATION_MESSAGE);
 		}
 		
 		if (e.getSource() == delete) {
@@ -258,7 +260,7 @@ public class SystemManager extends WindowAdapter implements ActionListener {
 			}
 
 			dao.delete(mngcodeTxt.getText());
-			JOptionPane.showMessageDialog(null, "담당자 삭제 성공", "삭제성공", JOptionPane.OK_OPTION);
+			JOptionPane.showMessageDialog(null, "담당자 삭제 성공", "삭제성공", JOptionPane.INFORMATION_MESSAGE);
 		}
 	}
 }
