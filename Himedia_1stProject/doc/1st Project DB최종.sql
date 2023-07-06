@@ -7,15 +7,20 @@ SELECT * FROM DOCUMENTWHERE
 
 SELECT * FROM MEMBER
 
+-- 필드업데이트 쿼리
+ALTER TABLE SUSER MODIFY USER_PWD VARCHAR2(300)
 
 -- 담당자 설정여부 조회쿼리
-SELECT m.manager_id,m.manager_name,m.manager_email, u.manager_id, 
+SELECT m.manager_id,m.manager_name,m.manager_email, m.MANAGER_PWD, u.manager_id, 
 CASE
 	WHEN u.manager_id IS NULL THEN 'N'
 	WHEN u.manager_id IS NOT NULL THEN 'Y'
 	END ISMATCH
 FROM USERREQUEST u, member m
 WHERE m.manager_id = u.manager_id(+)
+
+-- max 조회쿼리
+SELECT NVL(MAX(MANAGER_ID), 0) +1 FROM MEMBER
 
 
 -- 테이블생성
@@ -93,16 +98,22 @@ INSERT INTO DOCUMENTWHERE values('1001','가나다','라마사바','','','','','
 
 INSERT INTO USERREQUEST values('1002','철수회사','김철희','2000-01-01','10','10010','','')
 
+INSERT INTO MEMBER values((SELECT NVL(MAX(MANAGER_ID), 0) +1 FROM MEMBER), '이름', '이메일',(SELECT NVL(MAX(MANAGER_PWD), 0) +1 FROM MEMBER))
+
+
 
 -- 레코드삭제
 DELETE FROM SUSER 
-WHERE USER_id = '1003'
+WHERE USER_id = '1004'
 
 DELETE FROM USERREQUEST 
-WHERE USER_id = '1003'
+WHERE USER_id = '1002'
 
 DELETE FROM DOCUMENTWHERE
 WHERE USER_id = '1002'
+
+DELETE FROM MEMBER
+WHERE MANAGER_ID = '10011'
 
 
 -- 레코드업데이트
@@ -148,6 +159,8 @@ SET MANAGER_EMAIL = 'qna@namu.co.kr' WHERE MANAGER_ID = '10010'
 UPDATE MEMBER
 SET MANAGER_NAME = '담당자 배치중' WHERE MANAGER_ID = '10010'
 
+UPDATE MEMBER
+SET MANAGER_PWD = '50010' WHERE MANAGER_ID = '10010'
 
 -- 상세조회쿼리
 SELECT *
